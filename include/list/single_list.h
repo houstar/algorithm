@@ -55,6 +55,24 @@ void single_list_del(struct single_list_head *new, struct single_list_head *head
 }
 
 /**
+ * single_list_reverse - reverse the single list
+ * @head: the single list head
+ */
+void single_list_reverse(struct single_list_head *head) {
+    if (!head || !head->next) return;
+
+    struct single_list_head *prev = head->next;
+    struct single_list_head *current = prev->next;
+    while( current != NULL ) {
+        prev->next = current->next;
+        // move current as first element
+        current->next = head->next;
+        head->next = current;
+        current = prev->next;
+    }
+}
+
+/**
  * single_list_entry - get the struct of this list embbed in
  */
 #define single_list_entry(ptr, type, member) \
