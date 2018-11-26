@@ -3,14 +3,14 @@
 
 #include "container_of.h"
 
-/*
- * Simple circle list implementation
+/**
+ * \brief Simple circle list implementation
  */
 struct circle_list_head {
     struct circle_list_head *next;
 };
 
-/*
+/**
  * Initialize the circle list head's field
  *
  * This next field will be as head itself
@@ -25,10 +25,11 @@ struct circle_list_head {
 
 /**
  * circle_list_add - add a entry after the head
- * @new: new entry to be added
- * @head: circle list head
  *
  * This can be simple implement stack
+ *
+ * \param[in] new entry to be added
+ * \param[in] head circle list head
  */
 void circle_list_add(struct circle_list_head *new, struct circle_list_head *head) {
     if (!new || !head) return;
@@ -39,8 +40,9 @@ void circle_list_add(struct circle_list_head *new, struct circle_list_head *head
 
 /**
  * circle_list_del - del a entry from the list
- * @new: the entry to be deleted
- * @head: the circle list head
+ *
+ * \param[in] new the entry to be deleted
+ * \param[in] the circle list head
  */
 void circle_list_del(struct circle_list_head *new, struct circle_list_head *head) {
     if (!new || !head) return;

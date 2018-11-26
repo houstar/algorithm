@@ -3,19 +3,32 @@
 
 #include "container_of.h"
 
-/*
- * Simple single list implementation
+/**
+ * \brief Simple single list implementation
+ *
+ * This simple single list implementation achieved
+ * insert, delete and reverse operation and embed
+ * into the struct as member. To access the struct,
+ * please use single_list_entry.
+ */
+
+/**
+ * single_list_head
+ *
+ * single_list_head points the list head
+ *
  */
 struct single_list_head {
-    struct single_list_head *next;
+    struct single_list_head *next; /**< pointer to next node */
 };
 
-/*
+/**
  * Initialize the single list head's field
+ *
  */
 #define SINGLE_LIST_INIT(name) { NULL }
 
-/*
+/**
  * Initial the single list head
  */
 #define SINGLE_LIST(name) \
@@ -23,10 +36,9 @@ struct single_list_head {
 
 /**
  * single_list_add - add a entry after the head
- * @new: new entry to be added
- * @head: single list head
  *
- * This can be simple implement stack
+ * \param[in] new the node to be added
+ * \param[in] head the single list head
  */
 void single_list_add(struct single_list_head *new, struct single_list_head *head) {
     if (!new || !head) return;
@@ -37,8 +49,8 @@ void single_list_add(struct single_list_head *new, struct single_list_head *head
 
 /**
  * single_list_del - del a entry from the list
- * @new: the entry to be deleted
- * @head: the single list head
+ * \param[in] new the entry to be deleted
+ * \param[in] head the single list head
  */
 void single_list_del(struct single_list_head *new, struct single_list_head *head) {
     if (!new || !head) return;
@@ -56,7 +68,7 @@ void single_list_del(struct single_list_head *new, struct single_list_head *head
 
 /**
  * single_list_reverse - reverse the single list
- * @head: the single list head
+ * \param[in] head the single list head
  */
 void single_list_reverse(struct single_list_head *head) {
     if (!head || !head->next) return;

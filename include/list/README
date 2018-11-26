@@ -1,0 +1,2 @@
+This algorithm will not included double linked list since the linux kernel
+introduced in `include/linux/list.h`
