@@ -42,7 +42,7 @@ void circle_list_add(struct circle_list_head *new, struct circle_list_head *head
  * circle_list_del - del a entry from the list
  *
  * \param[in] new the entry to be deleted
- * \param[in] the circle list head
+ * \param[in] head the circle list head
  */
 void circle_list_del(struct circle_list_head *new, struct circle_list_head *head) {
     if (!new || !head) return;
