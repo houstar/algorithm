@@ -1,0 +1,18 @@
+language: c
+
+os: osx
+
+compiler:
+  - clang
+
+before_install:
+    - echo $TRAVIS_OS_NAME
+    - brew install check
+
+script:
+    - make
+
+notification:
+    email:
+    - qingyuan.hou@cn.ibm.com
+    
