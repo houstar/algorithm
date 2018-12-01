@@ -21,8 +21,8 @@ DOXYFILE := DOXYFILE
 #
 # # Now alter any implicit rules' variables if you like, e.g.:
 
-CC := llvm-gcc
-CFLAGS := -g -Wall
+CC := gcc
+CFLAGS := -g -Wall --std=gnu11
 CFLAGS += $(addprefix -I,$(INCLUDES))
 #
 # # The next bit checks to see whether rm is in your djgpp bin

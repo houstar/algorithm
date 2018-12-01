@@ -39,6 +39,8 @@ struct single_list_head {
  *
  * \param[in] new the node to be added
  * \param[in] head the single list head
+ *
+ * \since 0.1.0
  */
 void single_list_add(struct single_list_head *new, struct single_list_head *head) {
     if (!new || !head) return;
@@ -51,6 +53,8 @@ void single_list_add(struct single_list_head *new, struct single_list_head *head
  * single_list_del - del a entry from the list
  * \param[in] new the entry to be deleted
  * \param[in] head the single list head
+ *
+ * \since 0.1.0
  */
 void single_list_del(struct single_list_head *new, struct single_list_head *head) {
     if (!new || !head) return;
@@ -69,6 +73,8 @@ void single_list_del(struct single_list_head *new, struct single_list_head *head
 /**
  * single_list_reverse - reverse the single list
  * \param[in] head the single list head
+ *
+ * \since 0.1.0
  */
 void single_list_reverse(struct single_list_head *head) {
     if (!head || !head->next) return;
