@@ -5,7 +5,7 @@
 
 struct int_list {
     int val;
-    struct single_list_head list;
+    single_list_head list;
 };
 
 SINGLE_LIST(l);

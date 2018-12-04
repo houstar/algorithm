@@ -6,9 +6,9 @@
 /**
  * \brief Simple circle list implementation
  */
-struct circle_list_head {
+typedef struct circle_list_head {
     struct circle_list_head *next;
-};
+} circle_list_head;
 
 /**
  * Initialize the circle list head's field
@@ -21,7 +21,7 @@ struct circle_list_head {
  * Initial the circle list head
  */
 #define CIRCLE_LIST(name) \
-    struct circle_list_head name = CIRCLE_LIST_INIT(name)
+    circle_list_head name = CIRCLE_LIST_INIT(name)
 
 /**
  * circle_list_add - add a entry after the head
@@ -31,7 +31,7 @@ struct circle_list_head {
  * \param[in] new entry to be added
  * \param[in] head circle list head
  */
-void circle_list_add(struct circle_list_head *new, struct circle_list_head *head) {
+void circle_list_add(circle_list_head *new, circle_list_head *head) {
     if (!new || !head) return;
 
     new->next = head->next;
@@ -44,10 +44,10 @@ void circle_list_add(struct circle_list_head *new, struct circle_list_head *head
  * \param[in] new the entry to be deleted
  * \param[in] head the circle list head
  */
-void circle_list_del(struct circle_list_head *new, struct circle_list_head *head) {
+void circle_list_del(circle_list_head *new, circle_list_head *head) {
     if (!new || !head) return;
 
-    struct circle_list_head *prev = head;
+    circle_list_head *prev = head;
 
     // find new entry's prev pointer
     while (prev->next != new) {

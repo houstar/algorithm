@@ -18,9 +18,9 @@
  * single_list_head points the list head
  *
  */
-struct single_list_head {
+typedef struct single_list_head {
     struct single_list_head *next; /**< pointer to next node */
-};
+} single_list_head;
 
 /**
  * Initialize the single list head's field
@@ -32,7 +32,7 @@ struct single_list_head {
  * Initial the single list head
  */
 #define SINGLE_LIST(name) \
-    struct single_list_head name = SINGLE_LIST_INIT(name)
+    single_list_head name = SINGLE_LIST_INIT(name)
 
 /**
  * single_list_add - add a entry after the head
@@ -42,7 +42,7 @@ struct single_list_head {
  *
  * \since 0.1.0
  */
-void single_list_add(struct single_list_head *new, struct single_list_head *head) {
+void single_list_add(single_list_head *new, single_list_head *head) {
     if (!new || !head) return;
 
     new->next = head->next;
@@ -56,10 +56,10 @@ void single_list_add(struct single_list_head *new, struct single_list_head *head
  *
  * \since 0.1.0
  */
-void single_list_del(struct single_list_head *new, struct single_list_head *head) {
+void single_list_del(single_list_head *new, single_list_head *head) {
     if (!new || !head) return;
 
-    struct single_list_head *prev = head;
+    single_list_head *prev = head;
 
     // find new entry's prev pointer
     while (prev->next != new) {
@@ -76,11 +76,11 @@ void single_list_del(struct single_list_head *new, struct single_list_head *head
  *
  * \since 0.1.0
  */
-void single_list_reverse(struct single_list_head *head) {
+void single_list_reverse(single_list_head *head) {
     if (!head || !head->next) return;
 
-    struct single_list_head *prev = head->next;
-    struct single_list_head *current = prev->next;
+    single_list_head *prev = head->next;
+    single_list_head *current = prev->next;
     while( current != NULL ) {
         prev->next = current->next;
         // move current as first element
