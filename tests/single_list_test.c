@@ -10,7 +10,7 @@ struct int_list {
 
 SINGLE_LIST(l);
 
-void setup(void)
+static void setup(void)
 {
     /* use single_list_add to add entry */
     for(int i = 0; i < 10; i++ ) {
@@ -20,7 +20,7 @@ void setup(void)
     }
 }
 
-void teardown(void)
+static void teardown(void)
 {
     /* iter the single list */
     struct int_list *p = NULL;

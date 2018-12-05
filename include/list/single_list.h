@@ -42,12 +42,7 @@ typedef struct single_list_head {
  *
  * \since 0.1.0
  */
-void single_list_add(single_list_head *new, single_list_head *head) {
-    if (!new || !head) return;
-
-    new->next = head->next;
-    head->next = new;
-}
+extern void single_list_add(single_list_head *new, single_list_head *head);
 
 /**
  * single_list_del - del a entry from the list
@@ -56,19 +51,7 @@ void single_list_add(single_list_head *new, single_list_head *head) {
  *
  * \since 0.1.0
  */
-void single_list_del(single_list_head *new, single_list_head *head) {
-    if (!new || !head) return;
-
-    single_list_head *prev = head;
-
-    // find new entry's prev pointer
-    while (prev->next != new) {
-        prev = prev->next;
-    }
-
-    // delete the new entry
-    prev->next = prev->next->next;
-}
+extern void single_list_del(single_list_head *new, single_list_head *head);
 
 /**
  * single_list_reverse - reverse the single list
@@ -76,19 +59,7 @@ void single_list_del(single_list_head *new, single_list_head *head) {
  *
  * \since 0.1.0
  */
-void single_list_reverse(single_list_head *head) {
-    if (!head || !head->next) return;
-
-    single_list_head *prev = head->next;
-    single_list_head *current = prev->next;
-    while( current != NULL ) {
-        prev->next = current->next;
-        // move current as first element
-        current->next = head->next;
-        head->next = current;
-        current = prev->next;
-    }
-}
+extern void single_list_reverse(single_list_head *head);
 
 /**
  * single_list_entry - get the struct of this list embbed in

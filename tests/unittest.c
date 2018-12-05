@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
     SRunner *sr;
 
     sr = srunner_create(make_single_list_suite());
+    srunner_add_suite(sr, make_binary_tree_suite());
 
     srunner_run_all(sr, CK_VERBOSE);
     number_failed = srunner_ntests_failed(sr);
