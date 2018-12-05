@@ -1,7 +1,7 @@
 #ifndef CIRCLE_LIST_H
 #define CIRCLE_LIST_H
 
-#include "container_of.h"
+#include <utils/container_of.h>
 
 /**
  * \brief Simple circle list implementation
@@ -31,12 +31,7 @@ typedef struct circle_list_head {
  * \param[in] new entry to be added
  * \param[in] head circle list head
  */
-void circle_list_add(circle_list_head *new, circle_list_head *head) {
-    if (!new || !head) return;
-
-    new->next = head->next;
-    head->next = new;
-}
+void circle_list_add(circle_list_head *new, circle_list_head *head);
 
 /**
  * circle_list_del - del a entry from the list
@@ -44,19 +39,7 @@ void circle_list_add(circle_list_head *new, circle_list_head *head) {
  * \param[in] new the entry to be deleted
  * \param[in] head the circle list head
  */
-void circle_list_del(circle_list_head *new, circle_list_head *head) {
-    if (!new || !head) return;
-
-    circle_list_head *prev = head;
-
-    // find new entry's prev pointer
-    while (prev->next != new) {
-        prev = prev->next;
-    }
-
-    // delete the new entry
-    prev->next = prev->next->next;
-}
+void circle_list_del(circle_list_head *new, circle_list_head *head);
 
 /**
  * circle_list_entry - get the struct of this list embbed in

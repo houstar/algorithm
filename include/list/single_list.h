@@ -1,7 +1,7 @@
 #ifndef SINGLE_LIST_H
 #define SINGLE_LIST_H
 
-#include "container_of.h"
+#include <utils/container_of.h>
 
 /**
  * \brief Simple single list implementation
