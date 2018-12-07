@@ -24,45 +24,76 @@ struct int_list *newNode(int key)
     return n;
 }
 
+
+/**
+ * This Q_SIZE declares the Queue Size
+ *
+ * TODO Use realloc to achieve dynamic Queue
+ * */
 #define Q_SIZE (CHAR_BIT * sizeof(size_t))
 /**
  * level reversal the binary tree
  *
  * This level reversal uses array as queue
  * */
-void btree_level(node *head)
+int **btree_level(node *head, int **column_size, int *return_size)
 {
-    if (!head) return;
+    if (!head) {
+        *column_size = NULL;
+        *return_size = 0;
+        return NULL;
+    }
+
+    /* realloc to get the node address */
+    int **nodes = (int **)malloc(sizeof(int*));
+    *return_size = 0;
+    *column_size = NULL;
 
     node *q[Q_SIZE];
-    size_t front = 0, tail = 0, old_tail = 0;
+    size_t front = 0, rear = 0;
 
-    q[tail] = head;
-    tail = (tail + 1) % Q_SIZE;
-    while(front != tail) {
-        old_tail = tail;
-        for(int i = front ; i != old_tail; i = (i + 1) % Q_SIZE) {
-            printf("%d  ", container_of(q[i], struct int_list, node)->val);
-        }
-        printf("\n");
+    q[rear] = head;
+    rear = (rear + 1) % Q_SIZE;
+    while(front != rear) {
+        /* realloc memory for column_size and node */
+        *column_size = (int *)realloc(*column_size, sizeof(int) * (*return_size + 1));
+        nodes = (int **)realloc(nodes, sizeof(int*) * (*return_size + 1));
+        int level_width = (rear - front + Q_SIZE) % Q_SIZE;
 
-        for( ; front != old_tail; front = (front + 1) % Q_SIZE) {
+        (*column_size)[*return_size] = level_width;
+        nodes[*return_size] = (int *)calloc(level_width, sizeof(int));
+
+        for(int i = 0; i < level_width; i++) {
             node *temp = q[front];
+            front = (front + 1) % Q_SIZE;
+            nodes[*return_size][i] = container_of(temp, struct int_list, node)->val;
             if(temp->left) {
-                q[tail] = temp->left;
-                tail = (tail + 1) % Q_SIZE;
+                q[rear] = temp->left;
+                rear = (rear + 1) % Q_SIZE;
             }
             if(temp->right) {
-                q[tail] = temp->right;
-                tail = (tail + 1) % Q_SIZE;
+                q[rear] = temp->right;
+                rear = (rear + 1) % Q_SIZE;
             }
         }
+
+        (*return_size)++;
     }
+
+    return nodes;
 }
 
 
 static void setup(void)
 {
+    /**
+     *
+     *                 10
+     *           18         19
+     *      30     31           36
+     *
+     *
+     **/
     root = newNode(10);
 
     struct int_list *left = newNode(18);
@@ -93,7 +124,20 @@ START_TEST(btree_add_test)
     struct int_list *n1 = newNode(34);
     btree_add(&n1->node, &b);
 
-    btree_level(b.root);
+    int **array = NULL;
+    int *col = NULL;
+    int size = 0;
+
+    array = btree_level(b.root, &col, &size);
+
+    printf("level: column_size %d level %d\n", *col, size);
+    for(int i = 0; i < size; i++) {
+        int w = 1 << (size - i + 1);
+        for(int j = 0, len = col[i]; j < len; j++) {
+            printf("%*d%*c ", w, array[i][j], w, ' ');
+        }
+        printf("\n");
+    }
 }
 END_TEST
 
