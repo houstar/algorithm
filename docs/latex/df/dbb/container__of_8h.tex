@@ -1,0 +1,39 @@
+\hypertarget{container__of_8h}{}\section{include/utils/container\+\_\+of.h File Reference}
+\label{container__of_8h}\index{include/utils/container\+\_\+of.\+h@{include/utils/container\+\_\+of.\+h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{container__of_8h_af8c317a42292b61c93aae91e59118a46}{container\+\_\+of}}(ptr,  type,  member)
+\item 
+\#define \mbox{\hyperlink{container__of_8h_a5a5ce2d19e893e6131143f0895d60131}{W\+R\+I\+T\+E\+\_\+\+O\+N\+CE}}(var,  val)~($\ast$((volatile typeof(val) $\ast$)(\&(var))) = (val))
+\item 
+\#define \mbox{\hyperlink{container__of_8h_a4503f801c4d0fc8da14eaf068ce62297}{R\+E\+A\+D\+\_\+\+O\+N\+CE}}(var)~($\ast$((volatile typeof(var) $\ast$)(\&(var))))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{container__of_8h_af8c317a42292b61c93aae91e59118a46}\label{container__of_8h_af8c317a42292b61c93aae91e59118a46}} 
+\index{container\+\_\+of.\+h@{container\+\_\+of.\+h}!container\+\_\+of@{container\+\_\+of}}
+\index{container\+\_\+of@{container\+\_\+of}!container\+\_\+of.\+h@{container\+\_\+of.\+h}}
+\subsubsection{\texorpdfstring{container\+\_\+of}{container\_of}}
+{\footnotesize\ttfamily \#define container\+\_\+of(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{type,  }\item[{}]{member }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\{                      \(\backslash\)
+        const typeof( ((type *)0)->member ) *\_\_mptr = (ptr);    \(\backslash\)
+        (type *)( (\textcolor{keywordtype}{char} *)\_\_mptr - offsetof(type,member) );\})
+\end{DoxyCode}
+\mbox{\Hypertarget{container__of_8h_a4503f801c4d0fc8da14eaf068ce62297}\label{container__of_8h_a4503f801c4d0fc8da14eaf068ce62297}} 
+\index{container\+\_\+of.\+h@{container\+\_\+of.\+h}!R\+E\+A\+D\+\_\+\+O\+N\+CE@{R\+E\+A\+D\+\_\+\+O\+N\+CE}}
+\index{R\+E\+A\+D\+\_\+\+O\+N\+CE@{R\+E\+A\+D\+\_\+\+O\+N\+CE}!container\+\_\+of.\+h@{container\+\_\+of.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+A\+D\+\_\+\+O\+N\+CE}{READ\_ONCE}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+O\+N\+CE(\begin{DoxyParamCaption}\item[{}]{var }\end{DoxyParamCaption})~($\ast$((volatile typeof(var) $\ast$)(\&(var))))}
+
+\mbox{\Hypertarget{container__of_8h_a5a5ce2d19e893e6131143f0895d60131}\label{container__of_8h_a5a5ce2d19e893e6131143f0895d60131}} 
+\index{container\+\_\+of.\+h@{container\+\_\+of.\+h}!W\+R\+I\+T\+E\+\_\+\+O\+N\+CE@{W\+R\+I\+T\+E\+\_\+\+O\+N\+CE}}
+\index{W\+R\+I\+T\+E\+\_\+\+O\+N\+CE@{W\+R\+I\+T\+E\+\_\+\+O\+N\+CE}!container\+\_\+of.\+h@{container\+\_\+of.\+h}}
+\subsubsection{\texorpdfstring{W\+R\+I\+T\+E\+\_\+\+O\+N\+CE}{WRITE\_ONCE}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+O\+N\+CE(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})~($\ast$((volatile typeof(val) $\ast$)(\&(var))) = (val))}
+

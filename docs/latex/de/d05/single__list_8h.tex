@@ -1,0 +1,156 @@
+\hypertarget{single__list_8h}{}\section{include/list/single\+\_\+list.h File Reference}
+\label{single__list_8h}\index{include/list/single\+\_\+list.\+h@{include/list/single\+\_\+list.\+h}}
+{\ttfamily \#include $<$utils/container\+\_\+of.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}}
+\begin{DoxyCompactList}\small\item\em Simple single list implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{single__list_8h_a01f42d62c422698796bb9319f4f48387}{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)~\{ N\+U\+LL \}
+\item 
+\#define \mbox{\hyperlink{single__list_8h_af792716a30ff0ffd74facec22a1ab07c}{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+ST}}(name)~\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} name = \mbox{\hyperlink{single__list_8h_a01f42d62c422698796bb9319f4f48387}{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)
+\item 
+\#define \mbox{\hyperlink{single__list_8h_af81add0a169e0852e1d43a72434cae1f}{single\+\_\+list\+\_\+entry}}(ptr,  type,  member)~\mbox{\hyperlink{container__of_8h_af8c317a42292b61c93aae91e59118a46}{container\+\_\+of}}(ptr, type, member)
+\item 
+\#define \mbox{\hyperlink{single__list_8h_a19ab2b95d6078e76f73b07865cd7cfb4}{single\+\_\+list\+\_\+first\+\_\+entry}}(ptr,  type,  member)~\mbox{\hyperlink{single__list_8h_af81add0a169e0852e1d43a72434cae1f}{single\+\_\+list\+\_\+entry}}((ptr)-\/$>$next, type, member)
+\item 
+\#define \mbox{\hyperlink{single__list_8h_a7c00a0ecf173efa145734e33bd1597a4}{single\+\_\+list\+\_\+next\+\_\+entry}}(pos,  member)~\mbox{\hyperlink{single__list_8h_af81add0a169e0852e1d43a72434cae1f}{single\+\_\+list\+\_\+entry}}((pos)-\/$>$member.\+next, typeof($\ast$(pos)), member)
+\item 
+\#define \mbox{\hyperlink{single__list_8h_a8ae4941ed1a05fa9c7e59a01d955d49e}{single\+\_\+list\+\_\+for\+\_\+each}}(pos,  head)~for(pos = (head)-\/$>$next; pos != N\+U\+LL; pos = pos-\/$>$next)
+\item 
+\#define \mbox{\hyperlink{single__list_8h_a934dee1014a5bb3d802886615e3af9d3}{single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}}(pos,  head,  member)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} \mbox{\hyperlink{single__list_8h_a1fe447e92a6e4a8562508bdb4fc2e590}{single\+\_\+list\+\_\+head}}
+\begin{DoxyCompactList}\small\item\em Simple single list implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{single__list_8h_af76fe6f2bfae7b4571f739ec0437cd6c}{single\+\_\+list\+\_\+add}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$head)
+\item 
+void \mbox{\hyperlink{single__list_8h_a6a4700ceb9c8d35e08c622495420ae4a}{single\+\_\+list\+\_\+del}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$head)
+\item 
+void \mbox{\hyperlink{single__list_8h_ac2fbb592f7eb1201605ba038bd95bb52}{single\+\_\+list\+\_\+reverse}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$head)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{single__list_8h_af792716a30ff0ffd74facec22a1ab07c}\label{single__list_8h_af792716a30ff0ffd74facec22a1ab07c}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+ST@{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+ST}}
+\index{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+ST@{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+ST}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+ST}{SINGLE\_LIST}}
+{\footnotesize\ttfamily \#define S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+ST(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} name = \mbox{\hyperlink{single__list_8h_a01f42d62c422698796bb9319f4f48387}{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)}
+
+Initial the single list head \mbox{\Hypertarget{single__list_8h_af81add0a169e0852e1d43a72434cae1f}\label{single__list_8h_af81add0a169e0852e1d43a72434cae1f}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+entry@{single\+\_\+list\+\_\+entry}}
+\index{single\+\_\+list\+\_\+entry@{single\+\_\+list\+\_\+entry}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+entry}{single\_list\_entry}}
+{\footnotesize\ttfamily \#define single\+\_\+list\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{type,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{container__of_8h_af8c317a42292b61c93aae91e59118a46}{container\+\_\+of}}(ptr, type, member)}
+
+single\+\_\+list\+\_\+entry -\/ get the struct of this list embbed in \mbox{\Hypertarget{single__list_8h_a19ab2b95d6078e76f73b07865cd7cfb4}\label{single__list_8h_a19ab2b95d6078e76f73b07865cd7cfb4}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+first\+\_\+entry@{single\+\_\+list\+\_\+first\+\_\+entry}}
+\index{single\+\_\+list\+\_\+first\+\_\+entry@{single\+\_\+list\+\_\+first\+\_\+entry}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+first\+\_\+entry}{single\_list\_first\_entry}}
+{\footnotesize\ttfamily \#define single\+\_\+list\+\_\+first\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{type,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{single__list_8h_af81add0a169e0852e1d43a72434cae1f}{single\+\_\+list\+\_\+entry}}((ptr)-\/$>$next, type, member)}
+
+single\+\_\+list\+\_\+first\+\_\+entry -\/ get the first entry from the list \mbox{\Hypertarget{single__list_8h_a8ae4941ed1a05fa9c7e59a01d955d49e}\label{single__list_8h_a8ae4941ed1a05fa9c7e59a01d955d49e}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+for\+\_\+each@{single\+\_\+list\+\_\+for\+\_\+each}}
+\index{single\+\_\+list\+\_\+for\+\_\+each@{single\+\_\+list\+\_\+for\+\_\+each}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+for\+\_\+each}{single\_list\_for\_each}}
+{\footnotesize\ttfamily \#define single\+\_\+list\+\_\+for\+\_\+each(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{head }\end{DoxyParamCaption})~for(pos = (head)-\/$>$next; pos != N\+U\+LL; pos = pos-\/$>$next)}
+
+single\+\_\+list\+\_\+for\+\_\+each -\/ iter the single list \mbox{\Hypertarget{single__list_8h_a934dee1014a5bb3d802886615e3af9d3}\label{single__list_8h_a934dee1014a5bb3d802886615e3af9d3}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry@{single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}}
+\index{single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry@{single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}{single\_list\_for\_each\_entry}}
+{\footnotesize\ttfamily \#define single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{head,  }\item[{}]{member }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for}(pos = \mbox{\hyperlink{single__list_8h_a19ab2b95d6078e76f73b07865cd7cfb4}{single\_list\_first\_entry}}((head), typeof(*pos), member); \(\backslash\)
+            &pos->member != NULL; \(\backslash\)
+            pos = \mbox{\hyperlink{single__list_8h_a7c00a0ecf173efa145734e33bd1597a4}{single\_list\_next\_entry}}(pos, member))
+\end{DoxyCode}
+single\+\_\+list\+\_\+for\+\_\+each\+\_\+entry -\/ iter the single list \mbox{\Hypertarget{single__list_8h_a01f42d62c422698796bb9319f4f48387}\label{single__list_8h_a01f42d62c422698796bb9319f4f48387}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT@{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}
+\index{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT@{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}{SINGLE\_LIST\_INIT}}
+{\footnotesize\ttfamily \#define S\+I\+N\+G\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\{ N\+U\+LL \}}
+
+Initialize the single list head\textquotesingle{}s field \mbox{\Hypertarget{single__list_8h_a7c00a0ecf173efa145734e33bd1597a4}\label{single__list_8h_a7c00a0ecf173efa145734e33bd1597a4}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+next\+\_\+entry@{single\+\_\+list\+\_\+next\+\_\+entry}}
+\index{single\+\_\+list\+\_\+next\+\_\+entry@{single\+\_\+list\+\_\+next\+\_\+entry}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+next\+\_\+entry}{single\_list\_next\_entry}}
+{\footnotesize\ttfamily \#define single\+\_\+list\+\_\+next\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{single__list_8h_af81add0a169e0852e1d43a72434cae1f}{single\+\_\+list\+\_\+entry}}((pos)-\/$>$member.\+next, typeof($\ast$(pos)), member)}
+
+single\+\_\+list\+\_\+next\+\_\+entry -\/ get the next entry from the list 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{single__list_8h_a1fe447e92a6e4a8562508bdb4fc2e590}\label{single__list_8h_a1fe447e92a6e4a8562508bdb4fc2e590}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+head@{single\+\_\+list\+\_\+head}}
+\index{single\+\_\+list\+\_\+head@{single\+\_\+list\+\_\+head}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+head}{single\_list\_head}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}}  \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}}}
+
+
+
+Simple single list implementation. 
+
+This simple single list implementation achieved insert, delete and reverse operation and embed into the struct as member. To access the struct, please use single\+\_\+list\+\_\+entry. \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}}
+
+\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} points the list head 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{single__list_8h_af76fe6f2bfae7b4571f739ec0437cd6c}\label{single__list_8h_af76fe6f2bfae7b4571f739ec0437cd6c}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+add@{single\+\_\+list\+\_\+add}}
+\index{single\+\_\+list\+\_\+add@{single\+\_\+list\+\_\+add}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+add()}{single\_list\_add()}}
+{\footnotesize\ttfamily void single\+\_\+list\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+single\+\_\+list\+\_\+add -\/ add a entry after the head
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the node to be added \\
+\hline
+\mbox{\tt in}  & {\em head} & the single list head\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{single__list_8h_a6a4700ceb9c8d35e08c622495420ae4a}\label{single__list_8h_a6a4700ceb9c8d35e08c622495420ae4a}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+del@{single\+\_\+list\+\_\+del}}
+\index{single\+\_\+list\+\_\+del@{single\+\_\+list\+\_\+del}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+del()}{single\_list\_del()}}
+{\footnotesize\ttfamily void single\+\_\+list\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+single\+\_\+list\+\_\+del -\/ del a entry from the list 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the entry to be deleted \\
+\hline
+\mbox{\tt in}  & {\em head} & the single list head\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{single__list_8h_ac2fbb592f7eb1201605ba038bd95bb52}\label{single__list_8h_ac2fbb592f7eb1201605ba038bd95bb52}} 
+\index{single\+\_\+list.\+h@{single\+\_\+list.\+h}!single\+\_\+list\+\_\+reverse@{single\+\_\+list\+\_\+reverse}}
+\index{single\+\_\+list\+\_\+reverse@{single\+\_\+list\+\_\+reverse}!single\+\_\+list.\+h@{single\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{single\+\_\+list\+\_\+reverse()}{single\_list\_reverse()}}
+{\footnotesize\ttfamily void single\+\_\+list\+\_\+reverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+single\+\_\+list\+\_\+reverse -\/ reverse the single list 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em head} & the single list head\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}

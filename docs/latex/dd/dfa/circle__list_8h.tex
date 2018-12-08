@@ -1,0 +1,138 @@
+\hypertarget{circle__list_8h}{}\section{include/list/circle\+\_\+list.h File Reference}
+\label{circle__list_8h}\index{include/list/circle\+\_\+list.\+h@{include/list/circle\+\_\+list.\+h}}
+{\ttfamily \#include $<$utils/container\+\_\+of.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}}
+\begin{DoxyCompactList}\small\item\em Simple circle list implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{circle__list_8h_a1b53cd9a4977fb1494bc4cb7c40a6ce2}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)~\{ \&(name) \}
+\item 
+\#define \mbox{\hyperlink{circle__list_8h_a28f2f534cae4fa3100e04bb4ac428754}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}}(name)~\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} name = \mbox{\hyperlink{circle__list_8h_a1b53cd9a4977fb1494bc4cb7c40a6ce2}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)
+\item 
+\#define \mbox{\hyperlink{circle__list_8h_a5d0d78349dca63f54727356a004bb56e}{circle\+\_\+list\+\_\+entry}}(ptr,  type,  member)~\mbox{\hyperlink{container__of_8h_af8c317a42292b61c93aae91e59118a46}{container\+\_\+of}}(ptr, type, member)
+\item 
+\#define \mbox{\hyperlink{circle__list_8h_a4fbf5f69633429d6386da08b3e9040ac}{circle\+\_\+list\+\_\+first\+\_\+entry}}(ptr,  type,  member)~\mbox{\hyperlink{circle__list_8h_a5d0d78349dca63f54727356a004bb56e}{circle\+\_\+list\+\_\+entry}}((ptr)-\/$>$next, type, member)
+\item 
+\#define \mbox{\hyperlink{circle__list_8h_ac29878d2a65b1cf484b49cd7345c2567}{circle\+\_\+list\+\_\+next\+\_\+entry}}(pos,  member)~\mbox{\hyperlink{circle__list_8h_a5d0d78349dca63f54727356a004bb56e}{circle\+\_\+list\+\_\+entry}}((pos)-\/$>$member.\+next, typeof($\ast$(pos)), member)
+\item 
+\#define \mbox{\hyperlink{circle__list_8h_aee233acfc517ea980ea86129549cae6d}{circle\+\_\+list\+\_\+for\+\_\+each}}(pos,  head)~for(pos = (head)-\/$>$next; pos != (head); pos = pos-\/$>$next)
+\item 
+\#define \mbox{\hyperlink{circle__list_8h_a9e1a644ddc72d4d7a889d1257fb68866}{circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}}(pos,  head,  member)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} \mbox{\hyperlink{circle__list_8h_af1b478d0355fb8da80105428c77dbce6}{circle\+\_\+list\+\_\+head}}
+\begin{DoxyCompactList}\small\item\em Simple circle list implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{circle__list_8h_a0789c76494464a430c21b1704ac33272}{circle\+\_\+list\+\_\+add}} (\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$head)
+\item 
+void \mbox{\hyperlink{circle__list_8h_a0ec2b9f62e6661e122f856d7b65c766a}{circle\+\_\+list\+\_\+del}} (\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$head)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{circle__list_8h_a28f2f534cae4fa3100e04bb4ac428754}\label{circle__list_8h_a28f2f534cae4fa3100e04bb4ac428754}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST@{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}}
+\index{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST@{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}{CIRCLE\_LIST}}
+{\footnotesize\ttfamily \#define C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} name = \mbox{\hyperlink{circle__list_8h_a1b53cd9a4977fb1494bc4cb7c40a6ce2}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)}
+
+\mbox{\Hypertarget{circle__list_8h_a5d0d78349dca63f54727356a004bb56e}\label{circle__list_8h_a5d0d78349dca63f54727356a004bb56e}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+entry@{circle\+\_\+list\+\_\+entry}}
+\index{circle\+\_\+list\+\_\+entry@{circle\+\_\+list\+\_\+entry}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+entry}{circle\_list\_entry}}
+{\footnotesize\ttfamily \#define circle\+\_\+list\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{type,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{container__of_8h_af8c317a42292b61c93aae91e59118a46}{container\+\_\+of}}(ptr, type, member)}
+
+circle\+\_\+list\+\_\+entry -\/ get the struct of this list embbed in \mbox{\Hypertarget{circle__list_8h_a4fbf5f69633429d6386da08b3e9040ac}\label{circle__list_8h_a4fbf5f69633429d6386da08b3e9040ac}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+first\+\_\+entry@{circle\+\_\+list\+\_\+first\+\_\+entry}}
+\index{circle\+\_\+list\+\_\+first\+\_\+entry@{circle\+\_\+list\+\_\+first\+\_\+entry}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+first\+\_\+entry}{circle\_list\_first\_entry}}
+{\footnotesize\ttfamily \#define circle\+\_\+list\+\_\+first\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{type,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{circle__list_8h_a5d0d78349dca63f54727356a004bb56e}{circle\+\_\+list\+\_\+entry}}((ptr)-\/$>$next, type, member)}
+
+circle\+\_\+list\+\_\+first\+\_\+entry -\/ get the first entry from the list \mbox{\Hypertarget{circle__list_8h_aee233acfc517ea980ea86129549cae6d}\label{circle__list_8h_aee233acfc517ea980ea86129549cae6d}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+for\+\_\+each@{circle\+\_\+list\+\_\+for\+\_\+each}}
+\index{circle\+\_\+list\+\_\+for\+\_\+each@{circle\+\_\+list\+\_\+for\+\_\+each}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+for\+\_\+each}{circle\_list\_for\_each}}
+{\footnotesize\ttfamily \#define circle\+\_\+list\+\_\+for\+\_\+each(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{head }\end{DoxyParamCaption})~for(pos = (head)-\/$>$next; pos != (head); pos = pos-\/$>$next)}
+
+circle\+\_\+list\+\_\+for\+\_\+each -\/ iter the circle list \mbox{\Hypertarget{circle__list_8h_a9e1a644ddc72d4d7a889d1257fb68866}\label{circle__list_8h_a9e1a644ddc72d4d7a889d1257fb68866}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry@{circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}}
+\index{circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry@{circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry}{circle\_list\_for\_each\_entry}}
+{\footnotesize\ttfamily \#define circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{head,  }\item[{}]{member }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for}(pos = \mbox{\hyperlink{circle__list_8h_a4fbf5f69633429d6386da08b3e9040ac}{circle\_list\_first\_entry}}((head), typeof(*pos), member); \(\backslash\)
+            &pos->member != head; \(\backslash\)
+            pos = \mbox{\hyperlink{circle__list_8h_ac29878d2a65b1cf484b49cd7345c2567}{circle\_list\_next\_entry}}(pos, member))
+\end{DoxyCode}
+circle\+\_\+list\+\_\+for\+\_\+each\+\_\+entry -\/ iter the circle list \mbox{\Hypertarget{circle__list_8h_a1b53cd9a4977fb1494bc4cb7c40a6ce2}\label{circle__list_8h_a1b53cd9a4977fb1494bc4cb7c40a6ce2}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT@{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}
+\index{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT@{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}{CIRCLE\_LIST\_INIT}}
+{\footnotesize\ttfamily \#define C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\{ \&(name) \}}
+
+Initialize the circle list head\textquotesingle{}s field
+
+This next field will be as head itself \mbox{\Hypertarget{circle__list_8h_ac29878d2a65b1cf484b49cd7345c2567}\label{circle__list_8h_ac29878d2a65b1cf484b49cd7345c2567}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+next\+\_\+entry@{circle\+\_\+list\+\_\+next\+\_\+entry}}
+\index{circle\+\_\+list\+\_\+next\+\_\+entry@{circle\+\_\+list\+\_\+next\+\_\+entry}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+next\+\_\+entry}{circle\_list\_next\_entry}}
+{\footnotesize\ttfamily \#define circle\+\_\+list\+\_\+next\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{circle__list_8h_a5d0d78349dca63f54727356a004bb56e}{circle\+\_\+list\+\_\+entry}}((pos)-\/$>$member.\+next, typeof($\ast$(pos)), member)}
+
+circle\+\_\+list\+\_\+next\+\_\+entry -\/ get the next entry from the list 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{circle__list_8h_af1b478d0355fb8da80105428c77dbce6}\label{circle__list_8h_af1b478d0355fb8da80105428c77dbce6}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+head@{circle\+\_\+list\+\_\+head}}
+\index{circle\+\_\+list\+\_\+head@{circle\+\_\+list\+\_\+head}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+head}{circle\_list\_head}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}}  \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}}}
+
+
+
+Simple circle list implementation. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{circle__list_8h_a0789c76494464a430c21b1704ac33272}\label{circle__list_8h_a0789c76494464a430c21b1704ac33272}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+add@{circle\+\_\+list\+\_\+add}}
+\index{circle\+\_\+list\+\_\+add@{circle\+\_\+list\+\_\+add}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+add()}{circle\_list\_add()}}
+{\footnotesize\ttfamily void circle\+\_\+list\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+circle\+\_\+list\+\_\+add -\/ add a entry after the head
+
+This can be simple implement stack
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & entry to be added \\
+\hline
+\mbox{\tt in}  & {\em head} & circle list head \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{circle__list_8h_a0ec2b9f62e6661e122f856d7b65c766a}\label{circle__list_8h_a0ec2b9f62e6661e122f856d7b65c766a}} 
+\index{circle\+\_\+list.\+h@{circle\+\_\+list.\+h}!circle\+\_\+list\+\_\+del@{circle\+\_\+list\+\_\+del}}
+\index{circle\+\_\+list\+\_\+del@{circle\+\_\+list\+\_\+del}!circle\+\_\+list.\+h@{circle\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+del()}{circle\_list\_del()}}
+{\footnotesize\ttfamily void circle\+\_\+list\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+circle\+\_\+list\+\_\+del -\/ del a entry from the list
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the entry to be deleted \\
+\hline
+\mbox{\tt in}  & {\em head} & the circle list head \\
+\hline
+\end{DoxyParams}

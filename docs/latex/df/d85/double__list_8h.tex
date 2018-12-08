@@ -1,0 +1,138 @@
+\hypertarget{double__list_8h}{}\section{include/list/double\+\_\+list.h File Reference}
+\label{double__list_8h}\index{include/list/double\+\_\+list.\+h@{include/list/double\+\_\+list.\+h}}
+{\ttfamily \#include $<$utils/container\+\_\+of.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlist__head}{list\+\_\+head}}
+\begin{DoxyCompactList}\small\item\em Simple double linked list implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{double__list_8h_a4642d4b7df28478bb762fe43c85b5c63}{L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT}}(name)~\{ \&(name), \&(name) \}
+\item 
+\#define \mbox{\hyperlink{double__list_8h_a42f0e72af970a790b60a740af8c9ecd0}{L\+I\+S\+T\+\_\+\+H\+E\+AD}}(name)~struct \mbox{\hyperlink{structlist__head}{list\+\_\+head}} name = \mbox{\hyperlink{double__list_8h_a4642d4b7df28478bb762fe43c85b5c63}{L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT}}(name)
+\item 
+\#define \mbox{\hyperlink{double__list_8h_a26c976b7f654e70df318c1843e5094de}{list\+\_\+entry}}(ptr,  type,  member)~\mbox{\hyperlink{container__of_8h_af8c317a42292b61c93aae91e59118a46}{container\+\_\+of}}(ptr, type, member)
+\item 
+\#define \mbox{\hyperlink{double__list_8h_a29b80cf9d55392a4949d2071b7db4d5c}{list\+\_\+first\+\_\+entry}}(ptr,  type,  member)~\mbox{\hyperlink{double__list_8h_a26c976b7f654e70df318c1843e5094de}{list\+\_\+entry}}((ptr)-\/$>$next, type, member)
+\item 
+\#define \mbox{\hyperlink{double__list_8h_ad5a7bbc278609c0fee4536eeeaa1afab}{list\+\_\+next\+\_\+entry}}(pos,  member)~\mbox{\hyperlink{double__list_8h_a26c976b7f654e70df318c1843e5094de}{list\+\_\+entry}}((pos)-\/$>$member.\+next, typeof($\ast$(pos)), member)
+\item 
+\#define \mbox{\hyperlink{double__list_8h_ab8b24e6660ab3760c923e4b4db3fa502}{list\+\_\+for\+\_\+each}}(pos,  head)~for(pos = (head)-\/$>$next; pos != N\+U\+LL; pos = pos-\/$>$next)
+\item 
+\#define \mbox{\hyperlink{double__list_8h_a9b782fefb5ab71ce9762182e45a615e1}{list\+\_\+for\+\_\+each\+\_\+entry}}(pos,  head,  member)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structlist__head}{list\+\_\+head}} \mbox{\hyperlink{double__list_8h_aba6d5021297e47bed1e58994fa4fa777}{list\+\_\+head}}
+\begin{DoxyCompactList}\small\item\em Simple double linked list implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{double__list_8h_a49fb283881d3fb673331250cc67b5fbb}{list\+\_\+add}} (\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$head)
+\item 
+void \mbox{\hyperlink{double__list_8h_adffc89551348dfaa865daa7147285257}{list\+\_\+del}} (\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$entry)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{double__list_8h_a26c976b7f654e70df318c1843e5094de}\label{double__list_8h_a26c976b7f654e70df318c1843e5094de}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+entry@{list\+\_\+entry}}
+\index{list\+\_\+entry@{list\+\_\+entry}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+entry}{list\_entry}}
+{\footnotesize\ttfamily \#define list\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{type,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{container__of_8h_af8c317a42292b61c93aae91e59118a46}{container\+\_\+of}}(ptr, type, member)}
+
+list\+\_\+entry -\/ get the struct of this list embbed in \mbox{\Hypertarget{double__list_8h_a29b80cf9d55392a4949d2071b7db4d5c}\label{double__list_8h_a29b80cf9d55392a4949d2071b7db4d5c}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+first\+\_\+entry@{list\+\_\+first\+\_\+entry}}
+\index{list\+\_\+first\+\_\+entry@{list\+\_\+first\+\_\+entry}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+first\+\_\+entry}{list\_first\_entry}}
+{\footnotesize\ttfamily \#define list\+\_\+first\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{type,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{double__list_8h_a26c976b7f654e70df318c1843e5094de}{list\+\_\+entry}}((ptr)-\/$>$next, type, member)}
+
+list\+\_\+first\+\_\+entry -\/ get the first entry from the list \mbox{\Hypertarget{double__list_8h_ab8b24e6660ab3760c923e4b4db3fa502}\label{double__list_8h_ab8b24e6660ab3760c923e4b4db3fa502}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+for\+\_\+each@{list\+\_\+for\+\_\+each}}
+\index{list\+\_\+for\+\_\+each@{list\+\_\+for\+\_\+each}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+for\+\_\+each}{list\_for\_each}}
+{\footnotesize\ttfamily \#define list\+\_\+for\+\_\+each(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{head }\end{DoxyParamCaption})~for(pos = (head)-\/$>$next; pos != N\+U\+LL; pos = pos-\/$>$next)}
+
+list\+\_\+for\+\_\+each -\/ iter the double list \mbox{\Hypertarget{double__list_8h_a9b782fefb5ab71ce9762182e45a615e1}\label{double__list_8h_a9b782fefb5ab71ce9762182e45a615e1}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+for\+\_\+each\+\_\+entry@{list\+\_\+for\+\_\+each\+\_\+entry}}
+\index{list\+\_\+for\+\_\+each\+\_\+entry@{list\+\_\+for\+\_\+each\+\_\+entry}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+for\+\_\+each\+\_\+entry}{list\_for\_each\_entry}}
+{\footnotesize\ttfamily \#define list\+\_\+for\+\_\+each\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{head,  }\item[{}]{member }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for}(pos = \mbox{\hyperlink{double__list_8h_a29b80cf9d55392a4949d2071b7db4d5c}{list\_first\_entry}}((head), typeof(*pos), member); \(\backslash\)
+            &pos->member != NULL; \(\backslash\)
+            pos = \mbox{\hyperlink{double__list_8h_ad5a7bbc278609c0fee4536eeeaa1afab}{list\_next\_entry}}(pos, member))
+\end{DoxyCode}
+list\+\_\+for\+\_\+each\+\_\+entry -\/ iter the double list \mbox{\Hypertarget{double__list_8h_a42f0e72af970a790b60a740af8c9ecd0}\label{double__list_8h_a42f0e72af970a790b60a740af8c9ecd0}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!L\+I\+S\+T\+\_\+\+H\+E\+AD@{L\+I\+S\+T\+\_\+\+H\+E\+AD}}
+\index{L\+I\+S\+T\+\_\+\+H\+E\+AD@{L\+I\+S\+T\+\_\+\+H\+E\+AD}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+S\+T\+\_\+\+H\+E\+AD}{LIST\_HEAD}}
+{\footnotesize\ttfamily \#define L\+I\+S\+T\+\_\+\+H\+E\+AD(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~struct \mbox{\hyperlink{structlist__head}{list\+\_\+head}} name = \mbox{\hyperlink{double__list_8h_a4642d4b7df28478bb762fe43c85b5c63}{L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT}}(name)}
+
+Declare the L\+I\+ST H\+E\+AD \mbox{\Hypertarget{double__list_8h_a4642d4b7df28478bb762fe43c85b5c63}\label{double__list_8h_a4642d4b7df28478bb762fe43c85b5c63}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT@{L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT}}
+\index{L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT@{L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT}{LIST\_HEAD\_INIT}}
+{\footnotesize\ttfamily \#define L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\{ \&(name), \&(name) \}}
+
+Initialize the list head \mbox{\Hypertarget{double__list_8h_ad5a7bbc278609c0fee4536eeeaa1afab}\label{double__list_8h_ad5a7bbc278609c0fee4536eeeaa1afab}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+next\+\_\+entry@{list\+\_\+next\+\_\+entry}}
+\index{list\+\_\+next\+\_\+entry@{list\+\_\+next\+\_\+entry}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+next\+\_\+entry}{list\_next\_entry}}
+{\footnotesize\ttfamily \#define list\+\_\+next\+\_\+entry(\begin{DoxyParamCaption}\item[{}]{pos,  }\item[{}]{member }\end{DoxyParamCaption})~\mbox{\hyperlink{double__list_8h_a26c976b7f654e70df318c1843e5094de}{list\+\_\+entry}}((pos)-\/$>$member.\+next, typeof($\ast$(pos)), member)}
+
+list\+\_\+next\+\_\+entry -\/ get the next entry from the list 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{double__list_8h_aba6d5021297e47bed1e58994fa4fa777}\label{double__list_8h_aba6d5021297e47bed1e58994fa4fa777}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+head@{list\+\_\+head}}
+\index{list\+\_\+head@{list\+\_\+head}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+head}{list\_head}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structlist__head}{list\+\_\+head}}  \mbox{\hyperlink{structlist__head}{list\+\_\+head}}}
+
+
+
+Simple double linked list implementation. 
+
+Definition of the double linked list 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{double__list_8h_a49fb283881d3fb673331250cc67b5fbb}\label{double__list_8h_a49fb283881d3fb673331250cc67b5fbb}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+add@{list\+\_\+add}}
+\index{list\+\_\+add@{list\+\_\+add}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+add()}{list\_add()}}
+{\footnotesize\ttfamily void list\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+list\+\_\+add -\/ add a new entry
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the new entry to be added \\
+\hline
+\mbox{\tt in}  & {\em head} & the double list head\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{double__list_8h_adffc89551348dfaa865daa7147285257}\label{double__list_8h_adffc89551348dfaa865daa7147285257}} 
+\index{double\+\_\+list.\+h@{double\+\_\+list.\+h}!list\+\_\+del@{list\+\_\+del}}
+\index{list\+\_\+del@{list\+\_\+del}!double\+\_\+list.\+h@{double\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+del()}{list\_del()}}
+{\footnotesize\ttfamily void list\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+list\+\_\+del -\/ del entry from the list
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & the entry to be deleted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL 
+\end{DoxyReturn}

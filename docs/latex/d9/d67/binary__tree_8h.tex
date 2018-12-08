@@ -1,0 +1,93 @@
+\hypertarget{binary__tree_8h}{}\section{include/tree/binary\+\_\+tree.h File Reference}
+\label{binary__tree_8h}\index{include/tree/binary\+\_\+tree.\+h@{include/tree/binary\+\_\+tree.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnode}{node}}
+\item 
+struct \mbox{\hyperlink{structbtree}{btree}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{binary__tree_8h_ae7dac6885a08c35ca1ea905306046257}{B\+T\+R\+E\+E\+\_\+\+I\+N\+IT}}(name)~\{ N\+U\+LL \}
+\item 
+\#define \mbox{\hyperlink{binary__tree_8h_a5dc14fe472545d359b73d6f0ffda9dae}{B\+T\+R\+EE}}(name)~\mbox{\hyperlink{structbtree}{btree}} name = \mbox{\hyperlink{binary__tree_8h_ae7dac6885a08c35ca1ea905306046257}{B\+T\+R\+E\+E\+\_\+\+I\+N\+IT}}(name)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structnode}{node}} \mbox{\hyperlink{binary__tree_8h_af4aeda155dbe167f1c1cf38cb65bf324}{node}}
+\item 
+typedef struct \mbox{\hyperlink{structbtree}{btree}} \mbox{\hyperlink{binary__tree_8h_af55eab70ee9b79d84533676b4718a061}{btree}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{binary__tree_8h_ae72664dd103ba1fdb837a53f57676118}{btree\+\_\+add}} (\mbox{\hyperlink{structnode}{node}} $\ast$new, \mbox{\hyperlink{structbtree}{btree}} $\ast$head)
+\item 
+void \mbox{\hyperlink{binary__tree_8h_a76141e085749bf9638f2ae8136425817}{btree\+\_\+del}} (\mbox{\hyperlink{structnode}{node}} $\ast$new, \mbox{\hyperlink{structbtree}{btree}} $\ast$head)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{binary__tree_8h_a5dc14fe472545d359b73d6f0ffda9dae}\label{binary__tree_8h_a5dc14fe472545d359b73d6f0ffda9dae}} 
+\index{binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}!B\+T\+R\+EE@{B\+T\+R\+EE}}
+\index{B\+T\+R\+EE@{B\+T\+R\+EE}!binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}}
+\subsubsection{\texorpdfstring{B\+T\+R\+EE}{BTREE}}
+{\footnotesize\ttfamily \#define B\+T\+R\+EE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{structbtree}{btree}} name = \mbox{\hyperlink{binary__tree_8h_ae7dac6885a08c35ca1ea905306046257}{B\+T\+R\+E\+E\+\_\+\+I\+N\+IT}}(name)}
+
+Initialize the binary tree structure \mbox{\Hypertarget{binary__tree_8h_ae7dac6885a08c35ca1ea905306046257}\label{binary__tree_8h_ae7dac6885a08c35ca1ea905306046257}} 
+\index{binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}!B\+T\+R\+E\+E\+\_\+\+I\+N\+IT@{B\+T\+R\+E\+E\+\_\+\+I\+N\+IT}}
+\index{B\+T\+R\+E\+E\+\_\+\+I\+N\+IT@{B\+T\+R\+E\+E\+\_\+\+I\+N\+IT}!binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}}
+\subsubsection{\texorpdfstring{B\+T\+R\+E\+E\+\_\+\+I\+N\+IT}{BTREE\_INIT}}
+{\footnotesize\ttfamily \#define B\+T\+R\+E\+E\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\{ N\+U\+LL \}}
+
+Initialize the binary tree head 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{binary__tree_8h_af55eab70ee9b79d84533676b4718a061}\label{binary__tree_8h_af55eab70ee9b79d84533676b4718a061}} 
+\index{binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}!btree@{btree}}
+\index{btree@{btree}!binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}}
+\subsubsection{\texorpdfstring{btree}{btree}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structbtree}{btree}} \mbox{\hyperlink{structbtree}{btree}}}
+
+\mbox{\Hypertarget{binary__tree_8h_af4aeda155dbe167f1c1cf38cb65bf324}\label{binary__tree_8h_af4aeda155dbe167f1c1cf38cb65bf324}} 
+\index{binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}!node@{node}}
+\index{node@{node}!binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}}
+\subsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structnode}{node}} \mbox{\hyperlink{structnode}{node}}}
+
+Binary tree implementation binary tree node declare 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{binary__tree_8h_ae72664dd103ba1fdb837a53f57676118}\label{binary__tree_8h_ae72664dd103ba1fdb837a53f57676118}} 
+\index{binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}!btree\+\_\+add@{btree\+\_\+add}}
+\index{btree\+\_\+add@{btree\+\_\+add}!binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}}
+\subsubsection{\texorpdfstring{btree\+\_\+add()}{btree\_add()}}
+{\footnotesize\ttfamily void btree\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnode}{node}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structbtree}{btree}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+binary tree insert
+
+
+\begin{DoxyParams}{Parameters}
+{\em new} & the node to be added \\
+\hline
+{\em head} & the binary tree root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{binary__tree_8h_a76141e085749bf9638f2ae8136425817}\label{binary__tree_8h_a76141e085749bf9638f2ae8136425817}} 
+\index{binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}!btree\+\_\+del@{btree\+\_\+del}}
+\index{btree\+\_\+del@{btree\+\_\+del}!binary\+\_\+tree.\+h@{binary\+\_\+tree.\+h}}
+\subsubsection{\texorpdfstring{btree\+\_\+del()}{btree\_del()}}
+{\footnotesize\ttfamily void btree\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnode}{node}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structbtree}{btree}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+binary tree delete
+
+
+\begin{DoxyParams}{Parameters}
+{\em new} & the node to be added \\
+\hline
+{\em head} & the binary tree head \\
+\hline
+\end{DoxyParams}
