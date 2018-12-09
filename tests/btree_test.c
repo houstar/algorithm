@@ -148,7 +148,7 @@ Suite *make_binary_tree_suite(void)
 
     s = suite_create("binary_tree");
     /* Core test case */
-    tc_core = tcase_create("Binary Tree");
+    tc_core = tcase_create("Core");
     tcase_add_checked_fixture(tc_core, setup, teardown);
     tcase_add_test(tc_core, btree_add_test);
     suite_add_tcase(s, tc_core);

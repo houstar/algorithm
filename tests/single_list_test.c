@@ -8,7 +8,7 @@ struct int_list {
     single_list_head list;
 };
 
-SINGLE_LIST(l);
+SINGLE_LIST(single_list_test_head);
 
 static void setup(void)
 {
@@ -16,7 +16,7 @@ static void setup(void)
     for(int i = 0; i < 10; i++ ) {
         struct int_list *p = (struct int_list *)malloc(sizeof(struct int_list));
         p->val = i;
-        single_list_add(&p->list, &l);
+        single_list_add(&p->list, &single_list_test_head);
     }
 }
 
@@ -24,7 +24,7 @@ static void teardown(void)
 {
     /* iter the single list */
     struct int_list *p = NULL;
-    single_list_for_each_entry(p, &l, list) {
+    single_list_for_each_entry(p, &single_list_test_head, list) {
         free(p);
     }
 }
@@ -36,11 +36,11 @@ START_TEST(single_list_add_test)
     for(int i = 10; i < 100; i++ ) {
         p = (struct int_list *)malloc(sizeof(struct int_list));
         p->val = i;
-        single_list_add(&p->list, &l);
+        single_list_add(&p->list, &single_list_test_head);
     }
 
     int j = 99;
-    single_list_for_each_entry(p, &l, list) {
+    single_list_for_each_entry(p, &single_list_test_head, list) {
         ck_assert_int_eq(p->val, j);
         j--;
     }
@@ -52,8 +52,8 @@ START_TEST(single_list_del_test)
 {
     /* iter the single list */
     struct int_list *p = NULL;
-    single_list_for_each_entry(p, &l, list) {
-        single_list_del(&p->list, &l);
+    single_list_for_each_entry(p, &single_list_test_head, list) {
+        single_list_del(&p->list, &single_list_test_head);
         free(p);
     }
 }
@@ -62,12 +62,12 @@ END_TEST
 START_TEST(single_list_reverse_test)
 {
     /* reverse the single list */
-    single_list_reverse(&l);
+    single_list_reverse(&single_list_test_head);
 
     /* iter the single list */
     struct int_list *p = NULL;
     int i = 0;
-    single_list_for_each_entry(p, &l, list) {
+    single_list_for_each_entry(p, &single_list_test_head, list) {
         ck_assert_int_eq(p->val, i);
         i++;
     }
