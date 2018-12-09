@@ -17,11 +17,11 @@ static inline void __list_add(list_head *new,
     next->prev = new;
     new->next = next;
     new->prev = prev;
-    prev->next = new;
+    WRITE_ONCE(prev->next, new);
 }
 
 /**
- * list_add - add a new entry
+ * list_add - add a new entry after the head of list
  *
  * \param[in] new the new entry to be added
  * \param[in] head the double list head
@@ -33,6 +33,18 @@ void list_add(list_head *new, list_head *head)
     __list_add(new, head, head->next);
 }
 
+/**
+ * list_add_tail - add a new entry at the tail of list
+ *
+ * \param[in] new the new entry to be added
+ * \param[in] head the double list head
+ *
+ * \return NULL
+ */
+void list_add_tail(list_head *new, list_head *head)
+{
+    __list_add(new, head->prev, head);
+}
 
 /**
  * Delete a list entry by making the prev/next entries
@@ -44,7 +56,7 @@ void list_add(list_head *new, list_head *head)
 static void __list_del(list_head *prev, list_head *next)
 {
 	next->prev = prev;
-	prev->next = next;
+	WRITE_ONCE(prev->next, next);
 }
 
 /**

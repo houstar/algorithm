@@ -95,12 +95,46 @@ Macros</h2></td></tr>
 <tr class="separator:a26c976b7f654e70df318c1843e5094de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29b80cf9d55392a4949d2071b7db4d5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a29b80cf9d55392a4949d2071b7db4d5c">list_first_entry</a>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>((ptr)-&gt;next, type, member)</td></tr>
 <tr class="separator:a29b80cf9d55392a4949d2071b7db4d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4aa6766f2ceda84f6b833d40ce97a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a7d4aa6766f2ceda84f6b833d40ce97a6">list_last_entry</a>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>((ptr)-&gt;prev, type, member)</td></tr>
+<tr class="separator:a7d4aa6766f2ceda84f6b833d40ce97a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b018d18f465feee8964831d3c858c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#ad6b018d18f465feee8964831d3c858c2">list_first_entry_or_null</a>(ptr,  type,  member)</td></tr>
+<tr class="separator:ad6b018d18f465feee8964831d3c858c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5a7bbc278609c0fee4536eeeaa1afab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos,  member)&#160;&#160;&#160;<a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>((pos)-&gt;member.next, typeof(*(pos)), member)</td></tr>
 <tr class="separator:ad5a7bbc278609c0fee4536eeeaa1afab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8b24e6660ab3760c923e4b4db3fa502"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#ab8b24e6660ab3760c923e4b4db3fa502">list_for_each</a>(pos,  head)&#160;&#160;&#160;for(pos = (head)-&gt;next; pos != NULL; pos = pos-&gt;next)</td></tr>
+<tr class="memitem:a9130468440cee8613eea994b4c737b6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a>(pos,  member)&#160;&#160;&#160;<a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>((pos)-&gt;member.prev, typeof(*(pos)), member)</td></tr>
+<tr class="separator:a9130468440cee8613eea994b4c737b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b24e6660ab3760c923e4b4db3fa502"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#ab8b24e6660ab3760c923e4b4db3fa502">list_for_each</a>(pos,  head)&#160;&#160;&#160;for (pos = (head)-&gt;next; pos != (head); pos = pos-&gt;next)</td></tr>
 <tr class="separator:ab8b24e6660ab3760c923e4b4db3fa502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fc06b83f3502a83ce566b8887e6aec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a19fc06b83f3502a83ce566b8887e6aec">list_for_each_prev</a>(pos,  head)&#160;&#160;&#160;for (pos = (head)-&gt;prev; pos != (head); pos = pos-&gt;prev)</td></tr>
+<tr class="separator:a19fc06b83f3502a83ce566b8887e6aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e4b9328744994b9d3878f5dad75c09f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a9e4b9328744994b9d3878f5dad75c09f">list_for_each_safe</a>(pos,  n,  head)</td></tr>
+<tr class="separator:a9e4b9328744994b9d3878f5dad75c09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4166108f765690426e9d89f02bff7df4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a4166108f765690426e9d89f02bff7df4">list_for_each_prev_safe</a>(pos,  n,  head)</td></tr>
+<tr class="separator:a4166108f765690426e9d89f02bff7df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b782fefb5ab71ce9762182e45a615e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a9b782fefb5ab71ce9762182e45a615e1">list_for_each_entry</a>(pos,  head,  member)</td></tr>
 <tr class="separator:a9b782fefb5ab71ce9762182e45a615e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc8d8e6c8ffe8ce964c5a1b59732cf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#accc8d8e6c8ffe8ce964c5a1b59732cf3">list_for_each_entry_reverse</a>(pos,  head,  member)</td></tr>
+<tr class="separator:accc8d8e6c8ffe8ce964c5a1b59732cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fc8bdd3ce7ee375e35baf9d2b2e62a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#af6fc8bdd3ce7ee375e35baf9d2b2e62a">list_prepare_entry</a>(pos,  head,  member)&#160;&#160;&#160;((pos) ? : <a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>(head, typeof(*pos), member))</td></tr>
+<tr class="separator:af6fc8bdd3ce7ee375e35baf9d2b2e62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b31084b4ece72dbd75d2bb1f01d9ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a91b31084b4ece72dbd75d2bb1f01d9ff">list_for_each_entry_continue</a>(pos,  head,  member)</td></tr>
+<tr class="separator:a91b31084b4ece72dbd75d2bb1f01d9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1633f5ae3e74918112a8e89ab696bff8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a1633f5ae3e74918112a8e89ab696bff8">list_for_each_entry_continue_reverse</a>(pos,  head,  member)</td></tr>
+<tr class="separator:a1633f5ae3e74918112a8e89ab696bff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f39924661f4dc908e710e8aee1eff0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a35f39924661f4dc908e710e8aee1eff0">list_for_each_entry_from</a>(pos,  head,  member)</td></tr>
+<tr class="separator:a35f39924661f4dc908e710e8aee1eff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac66af4168b581dbca23fdc09f0d69e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#afac66af4168b581dbca23fdc09f0d69e">list_for_each_entry_from_reverse</a>(pos,  head,  member)</td></tr>
+<tr class="separator:afac66af4168b581dbca23fdc09f0d69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f72d6bd5144c7970824813810d2da1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#ac3f72d6bd5144c7970824813810d2da1">list_for_each_entry_safe</a>(pos,  n,  head,  member)</td></tr>
+<tr class="separator:ac3f72d6bd5144c7970824813810d2da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fb81027ddca24ebb21aa8e70e4b4ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a70fb81027ddca24ebb21aa8e70e4b4ff">list_for_each_entry_safe_continue</a>(pos,  n,  head,  member)</td></tr>
+<tr class="separator:a70fb81027ddca24ebb21aa8e70e4b4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9eb9a805ba4f3bd2a9d332ad34cb3e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#ab9eb9a805ba4f3bd2a9d332ad34cb3e1">list_for_each_entry_safe_from</a>(pos,  n,  head,  member)</td></tr>
+<tr class="separator:ab9eb9a805ba4f3bd2a9d332ad34cb3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3ce0f89762fe2bc0a1d840ee610532"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a3a3ce0f89762fe2bc0a1d840ee610532">list_for_each_entry_safe_reverse</a>(pos,  n,  head,  member)</td></tr>
+<tr class="separator:a3a3ce0f89762fe2bc0a1d840ee610532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af423641568c98cc34b0ac68871593a16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#af423641568c98cc34b0ac68871593a16">list_safe_reset_next</a>(pos,  n,  member)&#160;&#160;&#160;n = <a class="el" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member)</td></tr>
+<tr class="separator:af423641568c98cc34b0ac68871593a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -112,6 +146,8 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a49fb283881d3fb673331250cc67b5fbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#a49fb283881d3fb673331250cc67b5fbb">list_add</a> (<a class="el" href="../../d9/d93/structlist__head.html">list_head</a> *new, <a class="el" href="../../d9/d93/structlist__head.html">list_head</a> *head)</td></tr>
 <tr class="separator:a49fb283881d3fb673331250cc67b5fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5bd4d17afc5d068a0d2a0f57c976c28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#ab5bd4d17afc5d068a0d2a0f57c976c28">list_add_tail</a> (<a class="el" href="../../d9/d93/structlist__head.html">list_head</a> *new, <a class="el" href="../../d9/d93/structlist__head.html">list_head</a> *head)</td></tr>
+<tr class="separator:ab5bd4d17afc5d068a0d2a0f57c976c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffc89551348dfaa865daa7147285257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d85/double__list_8h.html#adffc89551348dfaa865daa7147285257">list_del</a> (<a class="el" href="../../d9/d93/structlist__head.html">list_head</a> *entry)</td></tr>
 <tr class="separator:adffc89551348dfaa865daa7147285257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -147,7 +183,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>list_entry - get the struct of this list embbed in </p>
+<p>list_entry - get the struct for this entry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>the &amp;struct <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> pointer. </td></tr>
+    <tr><td class="paramname">type</td><td>the type of the struct this is embedded in. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -182,7 +225,61 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>list_first_entry - get the first entry from the list </p>
+<p>list_first_entry - get the first element from a list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>the list head to take the element from. </td></tr>
+    <tr><td class="paramname">type</td><td>the type of the struct this is embedded in. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>that list is expected to be not empty. </dd></dl>
+
+</div>
+</div>
+<a id="ad6b018d18f465feee8964831d3c858c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b018d18f465feee8964831d3c858c2">&#9670;&nbsp;</a></span>list_first_entry_or_null</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_first_entry_or_null</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ptr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">({ \</div><div class="line">    struct <a class="code" href="../../d9/d93/structlist__head.html">list_head</a> *head__ = (ptr); \</div><div class="line">    struct <a class="code" href="../../d9/d93/structlist__head.html">list_head</a> *pos__ = <a class="code" href="../../df/dbb/container__of_8h.html#a4503f801c4d0fc8da14eaf068ce62297">READ_ONCE</a>(head__-&gt;next); \</div><div class="line">    pos__ != head__ ? <a class="code" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>(pos__, type, member) : NULL; \</div><div class="line">})</div><div class="ttc" id="container__of_8h_html_a4503f801c4d0fc8da14eaf068ce62297"><div class="ttname"><a href="../../df/dbb/container__of_8h.html#a4503f801c4d0fc8da14eaf068ce62297">READ_ONCE</a></div><div class="ttdeci">#define READ_ONCE(var)</div><div class="ttdef"><b>Definition:</b> container_of.h:14</div></div>
+<div class="ttc" id="structlist__head_html"><div class="ttname"><a href="../../d9/d93/structlist__head.html">list_head</a></div><div class="ttdoc">Simple double linked list implementation. </div><div class="ttdef"><b>Definition:</b> double_list.h:13</div></div>
+<div class="ttc" id="double__list_8h_html_a26c976b7f654e70df318c1843e5094de"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a></div><div class="ttdeci">#define list_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:64</div></div>
+</div><!-- fragment --><p>list_first_entry_or_null - get the first element from a list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>the list head to take the element from. </td></tr>
+    <tr><td class="paramname">type</td><td>the type of the struct this is embedded in. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note that if the list is empty, it returns NULL. </p>
 
 </div>
 </div>
@@ -207,11 +304,17 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;for(pos = (head)-&gt;next; pos != NULL; pos = pos-&gt;next)</td>
+          <td></td><td>&#160;&#160;&#160;for (pos = (head)-&gt;next; pos != (head); pos = pos-&gt;next)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>list_for_each - iter the double list </p>
+<p>list_for_each - iterate over a list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -246,9 +349,560 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span>(pos = <a class="code" href="../../df/d85/double__list_8h.html#a29b80cf9d55392a4949d2071b7db4d5c">list_first_entry</a>((head), typeof(*pos), member); \</div><div class="line">            &amp;pos-&gt;member != NULL; \</div><div class="line">            pos = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member))</div><div class="ttc" id="double__list_8h_html_a29b80cf9d55392a4949d2071b7db4d5c"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a29b80cf9d55392a4949d2071b7db4d5c">list_first_entry</a></div><div class="ttdeci">#define list_first_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:57</div></div>
-<div class="ttc" id="double__list_8h_html_ad5a7bbc278609c0fee4536eeeaa1afab"><div class="ttname"><a href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a></div><div class="ttdeci">#define list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:63</div></div>
-</div><!-- fragment --><p>list_for_each_entry - iter the double list </p>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = <a class="code" href="../../df/d85/double__list_8h.html#a29b80cf9d55392a4949d2071b7db4d5c">list_first_entry</a>(head, typeof(*pos), member);    \</div><div class="line">         &amp;pos-&gt;member != (head);                    \</div><div class="line">         pos = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member))</div><div class="ttc" id="double__list_8h_html_a29b80cf9d55392a4949d2071b7db4d5c"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a29b80cf9d55392a4949d2071b7db4d5c">list_first_entry</a></div><div class="ttdeci">#define list_first_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:75</div></div>
+<div class="ttc" id="double__list_8h_html_ad5a7bbc278609c0fee4536eeeaa1afab"><div class="ttname"><a href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a></div><div class="ttdeci">#define list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:108</div></div>
+</div><!-- fragment --><p>list_for_each_entry - iterate over list of given type </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a91b31084b4ece72dbd75d2bb1f01d9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b31084b4ece72dbd75d2bb1f01d9ff">&#9670;&nbsp;</a></span>list_for_each_entry_continue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_continue</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member);            \</div><div class="line">         &amp;pos-&gt;member != (head);                    \</div><div class="line">         pos = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member))</div><div class="ttc" id="double__list_8h_html_ad5a7bbc278609c0fee4536eeeaa1afab"><div class="ttname"><a href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a></div><div class="ttdeci">#define list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:108</div></div>
+</div><!-- fragment --><p>list_for_each_entry_continue - continue iteration over list of given type </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Continue to iterate over list of given type, continuing after the current position. </p>
+
+</div>
+</div>
+<a id="a1633f5ae3e74918112a8e89ab696bff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1633f5ae3e74918112a8e89ab696bff8">&#9670;&nbsp;</a></span>list_for_each_entry_continue_reverse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_continue_reverse</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = <a class="code" href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a>(pos, member);            \</div><div class="line">         &amp;pos-&gt;member != (head);                    \</div><div class="line">         pos = <a class="code" href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a>(pos, member))</div><div class="ttc" id="double__list_8h_html_a9130468440cee8613eea994b4c737b6c"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a></div><div class="ttdeci">#define list_prev_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:116</div></div>
+</div><!-- fragment --><p>list_for_each_entry_continue_reverse - iterate backwards from the given point </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Start to iterate over list of given type backwards, continuing after the current position. </p>
+
+</div>
+</div>
+<a id="a35f39924661f4dc908e710e8aee1eff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f39924661f4dc908e710e8aee1eff0">&#9670;&nbsp;</a></span>list_for_each_entry_from</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_from</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (; &amp;pos-&gt;member != (head);                  \</div><div class="line">         pos = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member))</div><div class="ttc" id="double__list_8h_html_ad5a7bbc278609c0fee4536eeeaa1afab"><div class="ttname"><a href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a></div><div class="ttdeci">#define list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:108</div></div>
+</div><!-- fragment --><p>list_for_each_entry_from - iterate over list of given type from the current point </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Iterate over list of given type, continuing from current position. </p>
+
+</div>
+</div>
+<a id="afac66af4168b581dbca23fdc09f0d69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac66af4168b581dbca23fdc09f0d69e">&#9670;&nbsp;</a></span>list_for_each_entry_from_reverse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_from_reverse</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (; &amp;pos-&gt;member != (head);                  \</div><div class="line">         pos = <a class="code" href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a>(pos, member))</div><div class="ttc" id="double__list_8h_html_a9130468440cee8613eea994b4c737b6c"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a></div><div class="ttdeci">#define list_prev_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:116</div></div>
+</div><!-- fragment --><p>list_for_each_entry_from_reverse - iterate backwards over list of given type from the current point </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Iterate backwards over list of given type, continuing from current position. </p>
+
+</div>
+</div>
+<a id="accc8d8e6c8ffe8ce964c5a1b59732cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc8d8e6c8ffe8ce964c5a1b59732cf3">&#9670;&nbsp;</a></span>list_for_each_entry_reverse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_reverse</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = <a class="code" href="../../df/d85/double__list_8h.html#a7d4aa6766f2ceda84f6b833d40ce97a6">list_last_entry</a>(head, typeof(*pos), member);     \</div><div class="line">         &amp;pos-&gt;member != (head);                    \</div><div class="line">         pos = <a class="code" href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a>(pos, member))</div><div class="ttc" id="double__list_8h_html_a9130468440cee8613eea994b4c737b6c"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a></div><div class="ttdeci">#define list_prev_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:116</div></div>
+<div class="ttc" id="double__list_8h_html_a7d4aa6766f2ceda84f6b833d40ce97a6"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a7d4aa6766f2ceda84f6b833d40ce97a6">list_last_entry</a></div><div class="ttdeci">#define list_last_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:86</div></div>
+</div><!-- fragment --><p>list_for_each_entry_reverse - iterate backwards over list of given type. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac3f72d6bd5144c7970824813810d2da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f72d6bd5144c7970824813810d2da1">&#9670;&nbsp;</a></span>list_for_each_entry_safe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_safe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = <a class="code" href="../../df/d85/double__list_8h.html#a29b80cf9d55392a4949d2071b7db4d5c">list_first_entry</a>(head, typeof(*pos), member),    \</div><div class="line">        n = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member);           \</div><div class="line">         &amp;pos-&gt;member != (head);                    \</div><div class="line">         pos = n, n = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(n, member))</div><div class="ttc" id="double__list_8h_html_a29b80cf9d55392a4949d2071b7db4d5c"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a29b80cf9d55392a4949d2071b7db4d5c">list_first_entry</a></div><div class="ttdeci">#define list_first_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:75</div></div>
+<div class="ttc" id="double__list_8h_html_ad5a7bbc278609c0fee4536eeeaa1afab"><div class="ttname"><a href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a></div><div class="ttdeci">#define list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:108</div></div>
+</div><!-- fragment --><p>list_for_each_entry_safe - iterate over list of given type safe against removal of list entry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">n</td><td>another type * to use as temporary storage </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a70fb81027ddca24ebb21aa8e70e4b4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70fb81027ddca24ebb21aa8e70e4b4ff">&#9670;&nbsp;</a></span>list_for_each_entry_safe_continue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_safe_continue</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member),                \</div><div class="line">        n = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member);               \</div><div class="line">         &amp;pos-&gt;member != (head);                        \</div><div class="line">         pos = n, n = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(n, member))</div><div class="ttc" id="double__list_8h_html_ad5a7bbc278609c0fee4536eeeaa1afab"><div class="ttname"><a href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a></div><div class="ttdeci">#define list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:108</div></div>
+</div><!-- fragment --><p>list_for_each_entry_safe_continue - continue list iteration safe against removal </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">n</td><td>another type * to use as temporary storage </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Iterate over list of given type, continuing after current point, safe against removal of list entry. </p>
+
+</div>
+</div>
+<a id="ab9eb9a805ba4f3bd2a9d332ad34cb3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9eb9a805ba4f3bd2a9d332ad34cb3e1">&#9670;&nbsp;</a></span>list_for_each_entry_safe_from</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_safe_from</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (n = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member);                  \</div><div class="line">         &amp;pos-&gt;member != (head);                        \</div><div class="line">         pos = n, n = <a class="code" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(n, member))</div><div class="ttc" id="double__list_8h_html_ad5a7bbc278609c0fee4536eeeaa1afab"><div class="ttname"><a href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a></div><div class="ttdeci">#define list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:108</div></div>
+</div><!-- fragment --><p>list_for_each_entry_safe_from - iterate over list from current point safe against removal </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">n</td><td>another type * to use as temporary storage </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Iterate over list of given type from current point, safe against removal of list entry. </p>
+
+</div>
+</div>
+<a id="a3a3ce0f89762fe2bc0a1d840ee610532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a3ce0f89762fe2bc0a1d840ee610532">&#9670;&nbsp;</a></span>list_for_each_entry_safe_reverse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_entry_safe_reverse</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = <a class="code" href="../../df/d85/double__list_8h.html#a7d4aa6766f2ceda84f6b833d40ce97a6">list_last_entry</a>(head, typeof(*pos), member),     \</div><div class="line">        n = <a class="code" href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a>(pos, member);           \</div><div class="line">         &amp;pos-&gt;member != (head);                    \</div><div class="line">         pos = n, n = <a class="code" href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a>(n, member))</div><div class="ttc" id="double__list_8h_html_a9130468440cee8613eea994b4c737b6c"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a9130468440cee8613eea994b4c737b6c">list_prev_entry</a></div><div class="ttdeci">#define list_prev_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:116</div></div>
+<div class="ttc" id="double__list_8h_html_a7d4aa6766f2ceda84f6b833d40ce97a6"><div class="ttname"><a href="../../df/d85/double__list_8h.html#a7d4aa6766f2ceda84f6b833d40ce97a6">list_last_entry</a></div><div class="ttdeci">#define list_last_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> double_list.h:86</div></div>
+</div><!-- fragment --><p>list_for_each_entry_safe_reverse - iterate backwards over list safe against removal </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">n</td><td>another type * to use as temporary storage </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Iterate backwards over list of given type, safe against removal of list entry. </p>
+
+</div>
+</div>
+<a id="a19fc06b83f3502a83ce566b8887e6aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fc06b83f3502a83ce566b8887e6aec">&#9670;&nbsp;</a></span>list_for_each_prev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_prev</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;for (pos = (head)-&gt;prev; pos != (head); pos = pos-&gt;prev)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>list_for_each_prev - iterate over a list backwards </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4166108f765690426e9d89f02bff7df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4166108f765690426e9d89f02bff7df4">&#9670;&nbsp;</a></span>list_for_each_prev_safe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_prev_safe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = (head)-&gt;prev, n = pos-&gt;prev; \</div><div class="line">         pos != (head); \</div><div class="line">         pos = n, n = pos-&gt;prev)</div></div><!-- fragment --><p>list_for_each_prev_safe - iterate over a list backwards safe against removal of list entry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">n</td><td>another &amp;struct <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> to use as temporary storage </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e4b9328744994b9d3878f5dad75c09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e4b9328744994b9d3878f5dad75c09f">&#9670;&nbsp;</a></span>list_for_each_safe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_for_each_safe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (pos = (head)-&gt;next, n = pos-&gt;next; pos != (head); \</div><div class="line">        pos = n, n = pos-&gt;next)</div></div><!-- fragment --><p>list_for_each_safe - iterate over a list safe against removal of list entry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> to use as a loop cursor. </td></tr>
+    <tr><td class="paramname">n</td><td>another &amp;struct <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> to use as temporary storage </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -290,6 +944,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7d4aa6766f2ceda84f6b833d40ce97a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d4aa6766f2ceda84f6b833d40ce97a6">&#9670;&nbsp;</a></span>list_last_entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_last_entry</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ptr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>((ptr)-&gt;prev, type, member)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>list_last_entry - get the last element from a list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>the list head to take the element from. </td></tr>
+    <tr><td class="paramname">type</td><td>the type of the struct this is embedded in. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>that list is expected to be not empty. </dd></dl>
+
+</div>
+</div>
 <a id="ad5a7bbc278609c0fee4536eeeaa1afab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5a7bbc278609c0fee4536eeeaa1afab">&#9670;&nbsp;</a></span>list_next_entry</h2>
 
@@ -315,7 +1012,134 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>list_next_entry - get the next entry from the list </p>
+<p>list_next_entry - get the next element in list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to cursor </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af6fc8bdd3ce7ee375e35baf9d2b2e62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fc8bdd3ce7ee375e35baf9d2b2e62a">&#9670;&nbsp;</a></span>list_prepare_entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_prepare_entry</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">head, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((pos) ? : <a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>(head, typeof(*pos), member))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>list_prepare_entry - prepare a pos entry for use in <a class="el" href="../../df/d85/double__list_8h.html#a91b31084b4ece72dbd75d2bb1f01d9ff">list_for_each_entry_continue()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to use as a start point </td></tr>
+    <tr><td class="paramname">head</td><td>the head of the list </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Prepares a pos entry for use as a start point in <a class="el" href="../../df/d85/double__list_8h.html#a91b31084b4ece72dbd75d2bb1f01d9ff">list_for_each_entry_continue()</a>. </p>
+
+</div>
+</div>
+<a id="a9130468440cee8613eea994b4c737b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9130468440cee8613eea994b4c737b6c">&#9670;&nbsp;</a></span>list_prev_entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_prev_entry</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="../../df/d85/double__list_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>((pos)-&gt;member.prev, typeof(*(pos)), member)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>list_prev_entry - get the prev element in list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the type * to cursor </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af423641568c98cc34b0ac68871593a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af423641568c98cc34b0ac68871593a16">&#9670;&nbsp;</a></span>list_safe_reset_next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define list_safe_reset_next</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;n = <a class="el" href="../../df/d85/double__list_8h.html#ad5a7bbc278609c0fee4536eeeaa1afab">list_next_entry</a>(pos, member)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>list_safe_reset_next - reset a stale list_for_each_entry_safe loop </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the loop cursor used in the list_for_each_entry_safe loop </td></tr>
+    <tr><td class="paramname">n</td><td>temporary storage used in list_for_each_entry_safe </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d9/d93/structlist__head.html" title="Simple double linked list implementation. ">list_head</a> within the struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>list_safe_reset_next is not safe to use in general if the list may be modified concurrently (eg. the lock is dropped in the loop body). An exception to this is if the cursor element (pos) is pinned in the list, and list_safe_reset_next is called after re-taking the lock and before completing the current iteration of the loop body. </p>
 
 </div>
 </div>
@@ -363,7 +1187,44 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>list_add - add a new entry</p>
+<p>list_add - add a new entry after the head of list</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">new</td><td>the new entry to be added </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">head</td><td>the double list head</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NULL </dd></dl>
+
+</div>
+</div>
+<a id="ab5bd4d17afc5d068a0d2a0f57c976c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5bd4d17afc5d068a0d2a0f57c976c28">&#9670;&nbsp;</a></span>list_add_tail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void list_add_tail </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d93/structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d93/structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>head</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>list_add_tail - add a new entry at the tail of list</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">new</td><td>the new entry to be added </td></tr>
