@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "unittest.h"
+#include "../unittest.h"
 
 struct int_list {
     int val;

@@ -17,7 +17,7 @@ static inline void __list_add(list_head *new,
     next->prev = new;
     new->next = next;
     new->prev = prev;
-    WRITE_ONCE(prev->next, new);
+    prev->next = new;
 }
 
 /**
@@ -44,7 +44,7 @@ void list_add(list_head *new, list_head *head)
 static void __list_del(list_head *prev, list_head *next)
 {
 	next->prev = prev;
-	WRITE_ONCE(prev->next, next);
+	prev->next = next;
 }
 
 /**
