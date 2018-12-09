@@ -1,0 +1,68 @@
+\hypertarget{double__list_8c}{}\section{src/list/double\+\_\+list.c File Reference}
+\label{double__list_8c}\index{src/list/double\+\_\+list.\+c@{src/list/double\+\_\+list.\+c}}
+{\ttfamily \#include $<$list/double\+\_\+list.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{double__list_8c_a49fb283881d3fb673331250cc67b5fbb}{list\+\_\+add}} (\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$head)
+\item 
+void \mbox{\hyperlink{double__list_8c_ab5bd4d17afc5d068a0d2a0f57c976c28}{list\+\_\+add\+\_\+tail}} (\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$head)
+\item 
+void \mbox{\hyperlink{double__list_8c_adffc89551348dfaa865daa7147285257}{list\+\_\+del}} (\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$entry)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{double__list_8c_a49fb283881d3fb673331250cc67b5fbb}\label{double__list_8c_a49fb283881d3fb673331250cc67b5fbb}} 
+\index{double\+\_\+list.\+c@{double\+\_\+list.\+c}!list\+\_\+add@{list\+\_\+add}}
+\index{list\+\_\+add@{list\+\_\+add}!double\+\_\+list.\+c@{double\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+add()}{list\_add()}}
+{\footnotesize\ttfamily void list\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+list\+\_\+add -\/ add a new entry after the head of list
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the new entry to be added \\
+\hline
+\mbox{\tt in}  & {\em head} & the double list head\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{double__list_8c_ab5bd4d17afc5d068a0d2a0f57c976c28}\label{double__list_8c_ab5bd4d17afc5d068a0d2a0f57c976c28}} 
+\index{double\+\_\+list.\+c@{double\+\_\+list.\+c}!list\+\_\+add\+\_\+tail@{list\+\_\+add\+\_\+tail}}
+\index{list\+\_\+add\+\_\+tail@{list\+\_\+add\+\_\+tail}!double\+\_\+list.\+c@{double\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+add\+\_\+tail()}{list\_add\_tail()}}
+{\footnotesize\ttfamily void list\+\_\+add\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+list\+\_\+add\+\_\+tail -\/ add a new entry at the tail of list
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the new entry to be added \\
+\hline
+\mbox{\tt in}  & {\em head} & the double list head\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{double__list_8c_adffc89551348dfaa865daa7147285257}\label{double__list_8c_adffc89551348dfaa865daa7147285257}} 
+\index{double\+\_\+list.\+c@{double\+\_\+list.\+c}!list\+\_\+del@{list\+\_\+del}}
+\index{list\+\_\+del@{list\+\_\+del}!double\+\_\+list.\+c@{double\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+del()}{list\_del()}}
+{\footnotesize\ttfamily void list\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__head}{list\+\_\+head}} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+list\+\_\+del -\/ del entry from the list
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & the entry to be deleted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL 
+\end{DoxyReturn}

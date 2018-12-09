@@ -32,7 +32,7 @@ typedef struct \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{single__list_8h_af76fe6f2bfae7b4571f739ec0437cd6c}{single\+\_\+list\+\_\+add}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$head)
-\item 
+\begin{DoxyCompactList}\small\item\em Simple single list implementation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{single__list_8h_a6a4700ceb9c8d35e08c622495420ae4a}{single\+\_\+list\+\_\+del}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$head)
 \item 
 void \mbox{\hyperlink{single__list_8h_ac2fbb592f7eb1201605ba038bd95bb52}{single\+\_\+list\+\_\+reverse}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$head)
@@ -112,7 +112,23 @@ This simple single list implementation achieved insert, delete and reverse opera
 \subsubsection{\texorpdfstring{single\+\_\+list\+\_\+add()}{single\_list\_add()}}
 {\footnotesize\ttfamily void single\+\_\+list\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
 
+
+
+Simple single list implementation. 
+
 single\+\_\+list\+\_\+add -\/ add a entry after the head
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the node to be added \\
+\hline
+\mbox{\tt in}  & {\em head} & the single list head\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+0.\+1.\+0
+\end{DoxySince}
+This simple single list implementation achieved insert, delete and reverse operation and embed into the struct as member. To access the struct, please use single\+\_\+list\+\_\+entry. single\+\_\+list\+\_\+add -\/ add a entry after the head
 
 
 \begin{DoxyParams}[1]{Parameters}

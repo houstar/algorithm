@@ -111,6 +111,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af76fe6f2bfae7b4571f739ec0437cd6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d05/single__list_8h.html#af76fe6f2bfae7b4571f739ec0437cd6c">single_list_add</a> (<a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *new, <a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *head)</td></tr>
+<tr class="memdesc:af76fe6f2bfae7b4571f739ec0437cd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple single list implementation.  <a href="#af76fe6f2bfae7b4571f739ec0437cd6c">More...</a><br /></td></tr>
 <tr class="separator:af76fe6f2bfae7b4571f739ec0437cd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a4700ceb9c8d35e08c622495420ae4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d05/single__list_8h.html#a6a4700ceb9c8d35e08c622495420ae4a">single_list_del</a> (<a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *new, <a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *head)</td></tr>
 <tr class="separator:a6a4700ceb9c8d35e08c622495420ae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,7 +367,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Simple single list implementation. </p>
 <p>single_list_add - add a entry after the head</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">new</td><td>the node to be added </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">head</td><td>the single list head</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>0.1.0</dd></dl>
+<p>This simple single list implementation achieved insert, delete and reverse operation and embed into the struct as member. To access the struct, please use single_list_entry. single_list_add - add a entry after the head</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">new</td><td>the node to be added </td></tr>

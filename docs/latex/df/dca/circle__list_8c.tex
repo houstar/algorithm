@@ -1,0 +1,60 @@
+\hypertarget{circle__list_8c}{}\section{src/list/circle\+\_\+list.c File Reference}
+\label{circle__list_8c}\index{src/list/circle\+\_\+list.\+c@{src/list/circle\+\_\+list.\+c}}
+{\ttfamily \#include $<$list/circle\+\_\+list.\+h$>$}\newline
+{\ttfamily \#include $<$utils/container\+\_\+of.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{circle__list_8c_a28f2f534cae4fa3100e04bb4ac428754}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}}(name)~\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} name = \mbox{\hyperlink{circle__list_8h_a1b53cd9a4977fb1494bc4cb7c40a6ce2}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{circle__list_8c_a0789c76494464a430c21b1704ac33272}{circle\+\_\+list\+\_\+add}} (\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$head)
+\item 
+void \mbox{\hyperlink{circle__list_8c_a0ec2b9f62e6661e122f856d7b65c766a}{circle\+\_\+list\+\_\+del}} (\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$head)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{circle__list_8c_a28f2f534cae4fa3100e04bb4ac428754}\label{circle__list_8c_a28f2f534cae4fa3100e04bb4ac428754}} 
+\index{circle\+\_\+list.\+c@{circle\+\_\+list.\+c}!C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST@{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}}
+\index{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST@{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}!circle\+\_\+list.\+c@{circle\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST}{CIRCLE\_LIST}}
+{\footnotesize\ttfamily \#define C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+ST(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} name = \mbox{\hyperlink{circle__list_8h_a1b53cd9a4977fb1494bc4cb7c40a6ce2}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+S\+T\+\_\+\+I\+N\+IT}}(name)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{circle__list_8c_a0789c76494464a430c21b1704ac33272}\label{circle__list_8c_a0789c76494464a430c21b1704ac33272}} 
+\index{circle\+\_\+list.\+c@{circle\+\_\+list.\+c}!circle\+\_\+list\+\_\+add@{circle\+\_\+list\+\_\+add}}
+\index{circle\+\_\+list\+\_\+add@{circle\+\_\+list\+\_\+add}!circle\+\_\+list.\+c@{circle\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+add()}{circle\_list\_add()}}
+{\footnotesize\ttfamily void circle\+\_\+list\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+circle\+\_\+list\+\_\+add -\/ add a entry after the head
+
+This can be simple implement stack
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & entry to be added \\
+\hline
+\mbox{\tt in}  & {\em head} & circle list head \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{circle__list_8c_a0ec2b9f62e6661e122f856d7b65c766a}\label{circle__list_8c_a0ec2b9f62e6661e122f856d7b65c766a}} 
+\index{circle\+\_\+list.\+c@{circle\+\_\+list.\+c}!circle\+\_\+list\+\_\+del@{circle\+\_\+list\+\_\+del}}
+\index{circle\+\_\+list\+\_\+del@{circle\+\_\+list\+\_\+del}!circle\+\_\+list.\+c@{circle\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{circle\+\_\+list\+\_\+del()}{circle\_list\_del()}}
+{\footnotesize\ttfamily void circle\+\_\+list\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structcircle__list__head}{circle\+\_\+list\+\_\+head}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+circle\+\_\+list\+\_\+del -\/ del a entry from the list
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & the entry to be deleted \\
+\hline
+\mbox{\tt in}  & {\em head} & the circle list head \\
+\hline
+\end{DoxyParams}
