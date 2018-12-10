@@ -1,0 +1,138 @@
+\hypertarget{queue__array_8c}{}\section{src/queue/queue\+\_\+array.c File Reference}
+\label{queue__array_8c}\index{src/queue/queue\+\_\+array.\+c@{src/queue/queue\+\_\+array.\+c}}
+{\ttfamily \#include $<$queue/queue\+\_\+array.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{queue__array_8c_a498941da47e3c0cb875bfcd7dadc3c63}{queue\+\_\+init}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$$\ast$qq)
+\item 
+bool \mbox{\hyperlink{queue__array_8c_ac4e21e41a2bc773a299fd59f5b0ef392}{queue\+\_\+empty}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+void $\ast$ \mbox{\hyperlink{queue__array_8c_a59e5914b160ca4360d4317829fff10cf}{queue\+\_\+front}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+void $\ast$ \mbox{\hyperlink{queue__array_8c_a9092cb0b932537c33c770d172d6bc34a}{queue\+\_\+rear}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+bool \mbox{\hyperlink{queue__array_8c_a79d5d691ed29165f4054c623a00c017f}{queue\+\_\+add}} (void $\ast$item, \mbox{\hyperlink{structqueue}{queue}} $\ast$$\ast$q)
+\item 
+bool \mbox{\hyperlink{queue__array_8c_a3a5173e09e1fa90020f1c1a56155f8f6}{queue\+\_\+del}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+size\+\_\+t \mbox{\hyperlink{queue__array_8c_ac453aa5f41181a5f175a07a98544994e}{queue\+\_\+len}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{queue__array_8c_a79d5d691ed29165f4054c623a00c017f}\label{queue__array_8c_a79d5d691ed29165f4054c623a00c017f}} 
+\index{queue\+\_\+array.\+c@{queue\+\_\+array.\+c}!queue\+\_\+add@{queue\+\_\+add}}
+\index{queue\+\_\+add@{queue\+\_\+add}!queue\+\_\+array.\+c@{queue\+\_\+array.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+add()}{queue\_add()}}
+{\footnotesize\ttfamily bool queue\+\_\+add (\begin{DoxyParamCaption}\item[{void $\ast$}]{item,  }\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$$\ast$}]{q }\end{DoxyParamCaption})}
+
+queue\+\_\+add -\/ add entry into the queue rear
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of pointer of the structure \\
+\hline
+{\em item} & the entry to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__array_8c_a3a5173e09e1fa90020f1c1a56155f8f6}\label{queue__array_8c_a3a5173e09e1fa90020f1c1a56155f8f6}} 
+\index{queue\+\_\+array.\+c@{queue\+\_\+array.\+c}!queue\+\_\+del@{queue\+\_\+del}}
+\index{queue\+\_\+del@{queue\+\_\+del}!queue\+\_\+array.\+c@{queue\+\_\+array.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+del()}{queue\_del()}}
+{\footnotesize\ttfamily bool queue\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+queue\+\_\+del -\/ delete the front entry of the queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__array_8c_ac4e21e41a2bc773a299fd59f5b0ef392}\label{queue__array_8c_ac4e21e41a2bc773a299fd59f5b0ef392}} 
+\index{queue\+\_\+array.\+c@{queue\+\_\+array.\+c}!queue\+\_\+empty@{queue\+\_\+empty}}
+\index{queue\+\_\+empty@{queue\+\_\+empty}!queue\+\_\+array.\+c@{queue\+\_\+array.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+empty()}{queue\_empty()}}
+{\footnotesize\ttfamily bool queue\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+queue\+\_\+empty -\/ true if the queue is empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of Queue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__array_8c_a59e5914b160ca4360d4317829fff10cf}\label{queue__array_8c_a59e5914b160ca4360d4317829fff10cf}} 
+\index{queue\+\_\+array.\+c@{queue\+\_\+array.\+c}!queue\+\_\+front@{queue\+\_\+front}}
+\index{queue\+\_\+front@{queue\+\_\+front}!queue\+\_\+array.\+c@{queue\+\_\+array.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+front()}{queue\_front()}}
+{\footnotesize\ttfamily void$\ast$ queue\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+queue\+\_\+front -\/ get the front of the queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the void pointer of the item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__array_8c_a498941da47e3c0cb875bfcd7dadc3c63}\label{queue__array_8c_a498941da47e3c0cb875bfcd7dadc3c63}} 
+\index{queue\+\_\+array.\+c@{queue\+\_\+array.\+c}!queue\+\_\+init@{queue\+\_\+init}}
+\index{queue\+\_\+init@{queue\+\_\+init}!queue\+\_\+array.\+c@{queue\+\_\+array.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+init()}{queue\_init()}}
+{\footnotesize\ttfamily bool queue\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$$\ast$}]{qq }\end{DoxyParamCaption})}
+
+Initialize the Queue structure
+
+
+\begin{DoxyParams}{Parameters}
+{\em qq} & the pointer of pointer of Queue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__array_8c_ac453aa5f41181a5f175a07a98544994e}\label{queue__array_8c_ac453aa5f41181a5f175a07a98544994e}} 
+\index{queue\+\_\+array.\+c@{queue\+\_\+array.\+c}!queue\+\_\+len@{queue\+\_\+len}}
+\index{queue\+\_\+len@{queue\+\_\+len}!queue\+\_\+array.\+c@{queue\+\_\+array.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+len()}{queue\_len()}}
+{\footnotesize\ttfamily size\+\_\+t queue\+\_\+len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+queue\+\_\+len -\/ get the length of the queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__array_8c_a9092cb0b932537c33c770d172d6bc34a}\label{queue__array_8c_a9092cb0b932537c33c770d172d6bc34a}} 
+\index{queue\+\_\+array.\+c@{queue\+\_\+array.\+c}!queue\+\_\+rear@{queue\+\_\+rear}}
+\index{queue\+\_\+rear@{queue\+\_\+rear}!queue\+\_\+array.\+c@{queue\+\_\+array.\+c}}
+\subsubsection{\texorpdfstring{queue\+\_\+rear()}{queue\_rear()}}
+{\footnotesize\ttfamily void$\ast$ queue\+\_\+rear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+queue\+\_\+rear -\/ get the rear of the queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the void pointer of the item 
+\end{DoxyReturn}

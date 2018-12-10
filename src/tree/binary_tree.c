@@ -41,5 +41,4 @@ void btree_add(node *new, btree *head)
 
 void btree_del(node *new, btree *head)
 {
-
 }

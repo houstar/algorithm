@@ -33,6 +33,12 @@ typedef struct single_list_head {
  */
 #define SINGLE_LIST(name) \
     single_list_head name = SINGLE_LIST_INIT(name)
+/**
+ * INIT_SINGLE_LIST_HEAD - initial the single list head
+ *
+ * \param head the single list head
+ */
+extern void INIT_SINGLE_LIST_HEAD(single_list_head *head);
 
 /**
  * single_list_add - add a entry after the head

@@ -1,4 +1,4 @@
-#include <queue/queue.h>
+#include <queue/queue_array.h>
 
 #include <stdlib.h>
 
@@ -43,6 +43,7 @@ static inline bool __queue_is_valid(queue *q)
 
     return true;
 }
+
 /**
  * queue_empty - true if the queue is empty
  *
@@ -64,7 +65,7 @@ bool queue_empty(queue *q)
  *
  * \return bool
  */
-bool queue_full(queue *q)
+static inline bool __queue_full(queue *q)
 {
     __queue_is_valid(q);
 
@@ -107,7 +108,7 @@ static inline bool __queue_extend(queue **qq)
 {
     if ( !(*qq) ) return queue_init(qq);
 
-    if ( !queue_full(*qq) ) return true;
+    if ( !__queue_full(*qq) ) return true;
     /* if the Queue is full, then extend the size */
     (*qq)->items = (void **)realloc((*qq)->items, sizeof(void *) * ( (*qq)->cap) << 1);
 
@@ -120,6 +121,7 @@ static inline bool __queue_extend(queue **qq)
             (*qq)->rear += (*qq)->cap;
 
         } else {
+            /* if rear on the righside of the middle and leftside of front */
             for(size_t i = (*qq)->front; i < (*qq)->cap; i++) {
                 (*qq)->items[(*qq)->cap + i] = (*qq)->items[i];
             }

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Algorithm Library: include/queue/queue.h File Reference</title>
+<title>Algorithm Library: src/queue/queue_array.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -62,96 +62,36 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cac49a9e31bf4f7cd5ab50e2700548d0.html">queue</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b932d720ae4455b3a35ba932c1ee98d1.html">queue</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">queue.h File Reference</div>  </div>
+<div class="title">queue_array.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
-<code>#include &lt;stdbool.h&gt;</code><br />
-</div>
-<p><a href="../../d8/d38/queue_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d36/structqueue.html">queue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple Circle Queue implementation by array.  <a href="../../d2/d36/structqueue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a7e7e44adc9de82da09a1041781a922ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#a7e7e44adc9de82da09a1041781a922ad">Q_SIZE</a>&#160;&#160;&#160;32</td></tr>
-<tr class="memdesc:a7e7e44adc9de82da09a1041781a922ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Queue's Capacity.  <a href="#a7e7e44adc9de82da09a1041781a922ad">More...</a><br /></td></tr>
-<tr class="separator:a7e7e44adc9de82da09a1041781a922ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ae3925075f052290340ee4c1eb2a484e6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d2/d36/structqueue.html">queue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#ae3925075f052290340ee4c1eb2a484e6">queue</a></td></tr>
-<tr class="memdesc:ae3925075f052290340ee4c1eb2a484e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple Circle Queue implementation by array.  <a href="#ae3925075f052290340ee4c1eb2a484e6">More...</a><br /></td></tr>
-<tr class="separator:ae3925075f052290340ee4c1eb2a484e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d9/d68/queue__array_8h_source.html">queue/queue_array.h</a>&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a498941da47e3c0cb875bfcd7dadc3c63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#a498941da47e3c0cb875bfcd7dadc3c63">queue_init</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> **qq)</td></tr>
+<tr class="memitem:a498941da47e3c0cb875bfcd7dadc3c63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a498941da47e3c0cb875bfcd7dadc3c63">queue_init</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> **qq)</td></tr>
 <tr class="separator:a498941da47e3c0cb875bfcd7dadc3c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4e21e41a2bc773a299fd59f5b0ef392"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#ac4e21e41a2bc773a299fd59f5b0ef392">queue_empty</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
+<tr class="memitem:ac4e21e41a2bc773a299fd59f5b0ef392"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#ac4e21e41a2bc773a299fd59f5b0ef392">queue_empty</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
 <tr class="separator:ac4e21e41a2bc773a299fd59f5b0ef392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41f993dd968df40dd662b8c340478c85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#a41f993dd968df40dd662b8c340478c85">queue_full</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
-<tr class="separator:a41f993dd968df40dd662b8c340478c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e5914b160ca4360d4317829fff10cf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#a59e5914b160ca4360d4317829fff10cf">queue_front</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
+<tr class="memitem:a59e5914b160ca4360d4317829fff10cf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a59e5914b160ca4360d4317829fff10cf">queue_front</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
 <tr class="separator:a59e5914b160ca4360d4317829fff10cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9092cb0b932537c33c770d172d6bc34a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#a9092cb0b932537c33c770d172d6bc34a">queue_rear</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
+<tr class="memitem:a9092cb0b932537c33c770d172d6bc34a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a9092cb0b932537c33c770d172d6bc34a">queue_rear</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
 <tr class="separator:a9092cb0b932537c33c770d172d6bc34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79d5d691ed29165f4054c623a00c017f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#a79d5d691ed29165f4054c623a00c017f">queue_add</a> (void *item, <a class="el" href="../../d2/d36/structqueue.html">queue</a> **q)</td></tr>
+<tr class="memitem:a79d5d691ed29165f4054c623a00c017f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a79d5d691ed29165f4054c623a00c017f">queue_add</a> (void *item, <a class="el" href="../../d2/d36/structqueue.html">queue</a> **q)</td></tr>
 <tr class="separator:a79d5d691ed29165f4054c623a00c017f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a5173e09e1fa90020f1c1a56155f8f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#a3a5173e09e1fa90020f1c1a56155f8f6">queue_del</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
+<tr class="memitem:a3a5173e09e1fa90020f1c1a56155f8f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a3a5173e09e1fa90020f1c1a56155f8f6">queue_del</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
 <tr class="separator:a3a5173e09e1fa90020f1c1a56155f8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac453aa5f41181a5f175a07a98544994e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/queue_8h.html#ac453aa5f41181a5f175a07a98544994e">queue_len</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
+<tr class="memitem:ac453aa5f41181a5f175a07a98544994e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#ac453aa5f41181a5f175a07a98544994e">queue_len</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
 <tr class="separator:ac453aa5f41181a5f175a07a98544994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a7e7e44adc9de82da09a1041781a922ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e7e44adc9de82da09a1041781a922ad">&#9670;&nbsp;</a></span>Q_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define Q_SIZE&#160;&#160;&#160;32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Default Queue's Capacity. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="ae3925075f052290340ee4c1eb2a484e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3925075f052290340ee4c1eb2a484e6">&#9670;&nbsp;</a></span>queue</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="../../d2/d36/structqueue.html">queue</a>  <a class="el" href="../../d2/d36/structqueue.html">queue</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Simple Circle Queue implementation by array. </p>
-<p>This queue use dynamic circle array to save memory. If the queue is full, double the size Definition of dynamic queue </p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a79d5d691ed29165f4054c623a00c017f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79d5d691ed29165f4054c623a00c017f">&#9670;&nbsp;</a></span>queue_add()</h2>
@@ -265,32 +205,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the void pointer of the item </dd></dl>
-
-</div>
-</div>
-<a id="a41f993dd968df40dd662b8c340478c85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41f993dd968df40dd662b8c340478c85">&#9670;&nbsp;</a></span>queue_full()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool queue_full </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/d36/structqueue.html">queue</a> *&#160;</td>
-          <td class="paramname"><em>q</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>queue_full - true if the queue is full</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">q</td><td>the pointer of Queue structure</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>

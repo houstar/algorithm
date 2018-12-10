@@ -1,0 +1,144 @@
+\hypertarget{queue__list_8c}{}\section{src/queue/queue\+\_\+list.c File Reference}
+\label{queue__list_8c}\index{src/queue/queue\+\_\+list.\+c@{src/queue/queue\+\_\+list.\+c}}
+{\ttfamily \#include $<$queue/queue\+\_\+list.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{queue__list_8c_a022ad6b2a41fa5a736d9f9e5b1e4da9e}{lqueue\+\_\+init}} (\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$$\ast$lq)
+\begin{DoxyCompactList}\small\item\em Queue implementation by list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$ \mbox{\hyperlink{queue__list_8c_ac007685a8c907a59ac6d2aae13594da0}{lqueue\+\_\+front}} (\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
+\item 
+\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$ \mbox{\hyperlink{queue__list_8c_a2a128d7f14563b504bfbc144ccd9cfef}{lqueue\+\_\+rear}} (\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
+\item 
+bool \mbox{\hyperlink{queue__list_8c_a358dc65eb5df4c28b3eff9259eb3ab77}{lqueue\+\_\+add}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
+\item 
+bool \mbox{\hyperlink{queue__list_8c_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}{lqueue\+\_\+del}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$entry, \mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
+\item 
+size\+\_\+t \mbox{\hyperlink{queue__list_8c_aa53660e1c4c07745de60121a254d617c}{lqueue\+\_\+len}} (\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
+\item 
+bool \mbox{\hyperlink{queue__list_8c_a6c2195387e5fa70b4cdc5d5ad0f2db72}{lqueue\+\_\+empty}} (\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{queue__list_8c_a358dc65eb5df4c28b3eff9259eb3ab77}\label{queue__list_8c_a358dc65eb5df4c28b3eff9259eb3ab77}} 
+\index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+add@{lqueue\+\_\+add}}
+\index{lqueue\+\_\+add@{lqueue\+\_\+add}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+add()}{lqueue\_add()}}
+{\footnotesize\ttfamily bool lqueue\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{new,  }\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+lqueue\+\_\+add -\/ add entry into lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em new} & the entry to be added \\
+\hline
+{\em lq} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__list_8c_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}\label{queue__list_8c_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}} 
+\index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+del@{lqueue\+\_\+del}}
+\index{lqueue\+\_\+del@{lqueue\+\_\+del}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+del()}{lqueue\_del()}}
+{\footnotesize\ttfamily bool lqueue\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{entry,  }\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+lqueue\+\_\+entry -\/ delete entry into lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & the entry to be delete \\
+\hline
+{\em lq} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__list_8c_a6c2195387e5fa70b4cdc5d5ad0f2db72}\label{queue__list_8c_a6c2195387e5fa70b4cdc5d5ad0f2db72}} 
+\index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+empty@{lqueue\+\_\+empty}}
+\index{lqueue\+\_\+empty@{lqueue\+\_\+empty}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+empty()}{lqueue\_empty()}}
+{\footnotesize\ttfamily bool lqueue\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+lqueue\+\_\+empty -\/ true if the lqueue is empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em lq} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__list_8c_ac007685a8c907a59ac6d2aae13594da0}\label{queue__list_8c_ac007685a8c907a59ac6d2aae13594da0}} 
+\index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+front@{lqueue\+\_\+front}}
+\index{lqueue\+\_\+front@{lqueue\+\_\+front}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+front()}{lqueue\_front()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}}$\ast$ lqueue\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+lqueue\+\_\+front -\/ get the front of the lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em lq} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__list_8c_a022ad6b2a41fa5a736d9f9e5b1e4da9e}\label{queue__list_8c_a022ad6b2a41fa5a736d9f9e5b1e4da9e}} 
+\index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+init@{lqueue\+\_\+init}}
+\index{lqueue\+\_\+init@{lqueue\+\_\+init}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+init()}{lqueue\_init()}}
+{\footnotesize\ttfamily bool lqueue\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$$\ast$}]{lq }\end{DoxyParamCaption})}
+
+
+
+Queue implementation by list. 
+
+lqueue\+\_\+init -\/ Initialize the lqueue structure
+
+
+\begin{DoxyParams}{Parameters}
+{\em lq} & the pointer of pointer of lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__list_8c_aa53660e1c4c07745de60121a254d617c}\label{queue__list_8c_aa53660e1c4c07745de60121a254d617c}} 
+\index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+len@{lqueue\+\_\+len}}
+\index{lqueue\+\_\+len@{lqueue\+\_\+len}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+len()}{lqueue\_len()}}
+{\footnotesize\ttfamily size\+\_\+t lqueue\+\_\+len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+lqueue\+\_\+len -\/ get the length of the lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em lq} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__list_8c_a2a128d7f14563b504bfbc144ccd9cfef}\label{queue__list_8c_a2a128d7f14563b504bfbc144ccd9cfef}} 
+\index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+rear@{lqueue\+\_\+rear}}
+\index{lqueue\+\_\+rear@{lqueue\+\_\+rear}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+rear()}{lqueue\_rear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}}$\ast$ lqueue\+\_\+rear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+lqueue\+\_\+rear -\/ get the rear of the lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em lq} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} 
+\end{DoxyReturn}

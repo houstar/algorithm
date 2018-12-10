@@ -52,15 +52,6 @@ extern bool queue_init(queue **qq);
 extern bool queue_empty(queue *q);
 
 /**
- * queue_full - true if the queue is full
- *
- * \param q the pointer of Queue structure
- *
- * \return bool
- */
-extern bool queue_full(queue *q);
-
-/**
  * queue_front - get the front of the queue
  *
  * \param q the pointer of the structure

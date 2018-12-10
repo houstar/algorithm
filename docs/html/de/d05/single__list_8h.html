@@ -110,6 +110,8 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a747725404a29fa4355b8cb4ed7685788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d05/single__list_8h.html#a747725404a29fa4355b8cb4ed7685788">INIT_SINGLE_LIST_HEAD</a> (<a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *head)</td></tr>
+<tr class="separator:a747725404a29fa4355b8cb4ed7685788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af76fe6f2bfae7b4571f739ec0437cd6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d05/single__list_8h.html#af76fe6f2bfae7b4571f739ec0437cd6c">single_list_add</a> (<a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *new, <a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *head)</td></tr>
 <tr class="memdesc:af76fe6f2bfae7b4571f739ec0437cd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple single list implementation.  <a href="#af76fe6f2bfae7b4571f739ec0437cd6c">More...</a><br /></td></tr>
 <tr class="separator:af76fe6f2bfae7b4571f739ec0437cd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -268,8 +270,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span>(pos = <a class="code" href="../../de/d05/single__list_8h.html#a19ab2b95d6078e76f73b07865cd7cfb4">single_list_first_entry</a>((head), typeof(*pos), member); \</div><div class="line">            &amp;pos-&gt;member != NULL; \</div><div class="line">            pos = <a class="code" href="../../de/d05/single__list_8h.html#a7c00a0ecf173efa145734e33bd1597a4">single_list_next_entry</a>(pos, member))</div><div class="ttc" id="single__list_8h_html_a7c00a0ecf173efa145734e33bd1597a4"><div class="ttname"><a href="../../de/d05/single__list_8h.html#a7c00a0ecf173efa145734e33bd1597a4">single_list_next_entry</a></div><div class="ttdeci">#define single_list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> single_list.h:79</div></div>
-<div class="ttc" id="single__list_8h_html_a19ab2b95d6078e76f73b07865cd7cfb4"><div class="ttname"><a href="../../de/d05/single__list_8h.html#a19ab2b95d6078e76f73b07865cd7cfb4">single_list_first_entry</a></div><div class="ttdeci">#define single_list_first_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> single_list.h:73</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span>(pos = <a class="code" href="../../de/d05/single__list_8h.html#a19ab2b95d6078e76f73b07865cd7cfb4">single_list_first_entry</a>((head), typeof(*pos), member); \</div><div class="line">            &amp;pos-&gt;member != NULL; \</div><div class="line">            pos = <a class="code" href="../../de/d05/single__list_8h.html#a7c00a0ecf173efa145734e33bd1597a4">single_list_next_entry</a>(pos, member))</div><div class="ttc" id="single__list_8h_html_a7c00a0ecf173efa145734e33bd1597a4"><div class="ttname"><a href="../../de/d05/single__list_8h.html#a7c00a0ecf173efa145734e33bd1597a4">single_list_next_entry</a></div><div class="ttdeci">#define single_list_next_entry(pos, member)</div><div class="ttdef"><b>Definition:</b> single_list.h:85</div></div>
+<div class="ttc" id="single__list_8h_html_a19ab2b95d6078e76f73b07865cd7cfb4"><div class="ttname"><a href="../../de/d05/single__list_8h.html#a19ab2b95d6078e76f73b07865cd7cfb4">single_list_first_entry</a></div><div class="ttdeci">#define single_list_first_entry(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> single_list.h:79</div></div>
 </div><!-- fragment --><p>single_list_for_each_entry - iter the single list </p>
 
 </div>
@@ -342,6 +344,31 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a747725404a29fa4355b8cb4ed7685788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747725404a29fa4355b8cb4ed7685788">&#9670;&nbsp;</a></span>INIT_SINGLE_LIST_HEAD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void INIT_SINGLE_LIST_HEAD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>INIT_SINGLE_LIST_HEAD - initial the single list head</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>the single list head </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af76fe6f2bfae7b4571f739ec0437cd6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af76fe6f2bfae7b4571f739ec0437cd6c">&#9670;&nbsp;</a></span>single_list_add()</h2>
 

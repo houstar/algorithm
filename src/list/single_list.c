@@ -26,6 +26,16 @@ void single_list_add(single_list_head *new, single_list_head *head)
 }
 
 /**
+ * INIT_SINGLE_LIST_HEAD - initial the single list head
+ *
+ * \param head the single list head
+ */
+void INIT_SINGLE_LIST_HEAD(single_list_head *head)
+{
+    head->next = NULL;
+}
+
+/**
  * single_list_del - del a entry from the list
  * \param[in] new the entry to be deleted
  * \param[in] head the single list head
