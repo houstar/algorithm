@@ -9,7 +9,7 @@ struct int_list {
     list_head list;
 };
 
-LIST_HEAD(double_list_test_head);
+static LIST_HEAD(double_list_test_head);
 
 static void setup(void)
 {

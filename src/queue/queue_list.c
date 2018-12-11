@@ -34,7 +34,7 @@ bool lqueue_init(lqueue **lq)
 /**
  * lqueue_front - get the front of the lqueue
  *
- * \param lq the pointer of the lqueue structure
+ * \param q the pointer of the lqueue structure
  *
  * \return single_list_head
  */
@@ -46,7 +46,7 @@ single_list_head *lqueue_front(lqueue *q)
 /**
  * lqueue_rear - get the rear of the lqueue
  *
- * \param lq the pointer of the lqueue structure
+ * \param q the pointer of the lqueue structure
  *
  * \return single_list_head
  */
@@ -59,7 +59,7 @@ single_list_head *lqueue_rear(lqueue *q)
  * lqueue_add  - add entry into lqueue
  *
  * \param new the entry to be added
- * \param lq the pointer of the lqueue structure
+ * \param q the pointer of the lqueue structure
  *
  * \return bool
  */
@@ -77,7 +77,7 @@ bool lqueue_add(single_list_head *new, lqueue *q)
  * lqueue_entry - delete entry into lqueue
  *
  * \param entry the entry to be delete
- * \param lq the pointer of the lqueue structure
+ * \param q the pointer of the lqueue structure
  *
  * \return bool
  */
@@ -92,7 +92,7 @@ bool lqueue_del(single_list_head *entry, lqueue *q)
 /**
  * lqueue_len - get the length of the lqueue
  *
- * \param lq the pointer of the lqueue structure
+ * \param q the pointer of the lqueue structure
  *
  * \return size_t
  */
@@ -104,7 +104,7 @@ size_t lqueue_len(lqueue *q)
 /**
  * lqueue_empty - true if the lqueue is empty
  *
- * \param lq the pointer of the lqueue structure
+ * \param q the pointer of the lqueue structure
  *
  * \return bool
  */

@@ -31,7 +31,7 @@ typedef struct queue {
 /**
  * \brief Default Queue's Capacity
  */
-#define Q_SIZE 32
+#define Q_SIZE (4096/sizeof(void *))
 
 /**
  * Initialize the Queue structure

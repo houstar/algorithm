@@ -8,7 +8,7 @@ struct int_list {
     single_list_head list;
 };
 
-SINGLE_LIST(single_list_test_head);
+static SINGLE_LIST(single_list_test_head);
 
 static void setup(void)
 {

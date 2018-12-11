@@ -11,7 +11,11 @@
  */
 bool queue_init(queue **qq)
 {
-    *qq = (queue *)malloc(sizeof(queue));
+    /* if qq not initialized */
+    if ( ! (*qq)) {
+        *qq = (queue *)malloc(sizeof(queue));
+        (*qq)->items = NULL;
+    }
 
     if ( ! (*qq)) return false;
 
@@ -19,13 +23,15 @@ bool queue_init(queue **qq)
     (*qq)->cap = Q_SIZE;
 
     /* allocate memory for items */
-    (*qq)->items = (void **)malloc(sizeof(void *) * (*qq)->cap);
-
-    if ( !(*qq)->items) {
+    void **new_items = NULL;
+    new_items = (void **)realloc((*qq)->items, sizeof(void *) * (*qq)->cap);
+    if ( !new_items) {
         /* If failed to alloc memory, then free Q */
         free(*qq);
         return false;
     }
+
+    (*qq)->items = new_items;
 
     return true;
 
@@ -110,7 +116,12 @@ static inline bool __queue_extend(queue **qq)
 
     if ( !__queue_full(*qq) ) return true;
     /* if the Queue is full, then extend the size */
-    (*qq)->items = (void **)realloc((*qq)->items, sizeof(void *) * ( (*qq)->cap) << 1);
+    void **new_items = NULL;
+    new_items = (void **)realloc((*qq)->items, sizeof(void *) * ( (*qq)->cap) << 1);
+
+    if (!new_items) return false;
+
+    (*qq)->items = new_items;
 
     /* if rear on the lefside of the middle and front*/
     if ((*qq)->rear < (*qq)->front ) {

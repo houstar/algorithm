@@ -8,7 +8,7 @@ struct int_list {
     circle_list_head list;
 };
 
-CIRCLE_LIST(circle_list_test_head);
+static CIRCLE_LIST(circle_list_test_head);
 
 static void setup(void)
 {

@@ -11,7 +11,7 @@ struct int_list {
     node node;
 };
 
-BTREE(b);
+static BTREE(b);
 
 struct int_list *root;
 struct int_list *newNode(int key)
