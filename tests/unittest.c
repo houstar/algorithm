@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     srunner_add_suite(sr, make_circle_list_suite());
     srunner_add_suite(sr, make_double_list_suite());
     srunner_add_suite(sr, make_queue_array_suite());
+    srunner_add_suite(sr, make_queue_list_suite());
     srunner_add_suite(sr, make_binary_tree_suite());
 
     srunner_run_all(sr, CK_VERBOSE);

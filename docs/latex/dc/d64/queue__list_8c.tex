@@ -38,8 +38,11 @@ lqueue\+\_\+add -\/ add entry into lqueue
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool 
+bool
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}
 \mbox{\Hypertarget{queue__list_8c_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}\label{queue__list_8c_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}} 
 \index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+del@{lqueue\+\_\+del}}
 \index{lqueue\+\_\+del@{lqueue\+\_\+del}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
@@ -58,6 +61,9 @@ lqueue\+\_\+entry -\/ delete entry into lqueue
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(n) S(1) 
+\end{DoxyNote}
 \mbox{\Hypertarget{queue__list_8c_a6c2195387e5fa70b4cdc5d5ad0f2db72}\label{queue__list_8c_a6c2195387e5fa70b4cdc5d5ad0f2db72}} 
 \index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+empty@{lqueue\+\_\+empty}}
 \index{lqueue\+\_\+empty@{lqueue\+\_\+empty}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
@@ -74,6 +80,9 @@ lqueue\+\_\+empty -\/ true if the lqueue is empty
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}
 \mbox{\Hypertarget{queue__list_8c_ac007685a8c907a59ac6d2aae13594da0}\label{queue__list_8c_ac007685a8c907a59ac6d2aae13594da0}} 
 \index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+front@{lqueue\+\_\+front}}
 \index{lqueue\+\_\+front@{lqueue\+\_\+front}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
@@ -126,6 +135,9 @@ lqueue\+\_\+len -\/ get the length of the lqueue
 \begin{DoxyReturn}{Returns}
 size\+\_\+t 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}
 \mbox{\Hypertarget{queue__list_8c_a2a128d7f14563b504bfbc144ccd9cfef}\label{queue__list_8c_a2a128d7f14563b504bfbc144ccd9cfef}} 
 \index{queue\+\_\+list.\+c@{queue\+\_\+list.\+c}!lqueue\+\_\+rear@{lqueue\+\_\+rear}}
 \index{lqueue\+\_\+rear@{lqueue\+\_\+rear}!queue\+\_\+list.\+c@{queue\+\_\+list.\+c}}
@@ -142,3 +154,6 @@ lqueue\+\_\+rear -\/ get the rear of the lqueue
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}

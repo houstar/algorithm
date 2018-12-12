@@ -33,13 +33,10 @@ void circle_list_del(circle_list_head *new, circle_list_head *head)
 {
     if (!new || !head) return;
 
-    circle_list_head *prev = head;
+    circle_list_head **cur = &head;
+    for( ; *cur != new; cur = &(*cur)->next);
 
-    // find new entry's prev pointer
-    while (prev->next != new) {
-        prev = prev->next;
+    if (*cur) {
+        *cur = (*cur)->next;
     }
-
-    // delete the new entry
-    prev->next = prev->next->next;
 }

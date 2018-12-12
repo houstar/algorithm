@@ -101,6 +101,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2a128d7f14563b504bfbc144ccd9cfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a358dc65eb5df4c28b3eff9259eb3ab77"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da1/queue__list_8h.html#a358dc65eb5df4c28b3eff9259eb3ab77">lqueue_add</a> (<a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *new, <a class="el" href="../../d8/dc7/structlqueue.html">lqueue</a> *q)</td></tr>
 <tr class="separator:a358dc65eb5df4c28b3eff9259eb3ab77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a2432f0fc65b4dfdc3bd78dcc81fc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da1/queue__list_8h.html#ae9a2432f0fc65b4dfdc3bd78dcc81fc2">lqueue_del</a> (<a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *entry, <a class="el" href="../../d8/dc7/structlqueue.html">lqueue</a> *q)</td></tr>
+<tr class="separator:ae9a2432f0fc65b4dfdc3bd78dcc81fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa53660e1c4c07745de60121a254d617c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da1/queue__list_8h.html#aa53660e1c4c07745de60121a254d617c">lqueue_len</a> (<a class="el" href="../../d8/dc7/structlqueue.html">lqueue</a> *q)</td></tr>
 <tr class="separator:aa53660e1c4c07745de60121a254d617c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c2195387e5fa70b4cdc5d5ad0f2db72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da1/queue__list_8h.html#a6c2195387e5fa70b4cdc5d5ad0f2db72">lqueue_empty</a> (<a class="el" href="../../d8/dc7/structlqueue.html">lqueue</a> *q)</td></tr>
@@ -155,7 +157,64 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
+<p>lqueue_add - add entry into lqueue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new</td><td>the entry to be added </td></tr>
+    <tr><td class="paramname">q</td><td>the pointer of the lqueue structure</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>O(1) S(1) </dd></dl>
+
+</div>
+</div>
+<a id="ae9a2432f0fc65b4dfdc3bd78dcc81fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a2432f0fc65b4dfdc3bd78dcc81fc2">&#9670;&nbsp;</a></span>lqueue_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lqueue_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dfc/structsingle__list__head.html">single_list_head</a> *&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/dc7/structlqueue.html">lqueue</a> *&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>lqueue_del - delete entry from lqueue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>the entry to be added </td></tr>
+    <tr><td class="paramname">q</td><td>the pointer of the lqueue structure</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
+<p>lqueue_entry - delete entry into lqueue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>the entry to be delete </td></tr>
+    <tr><td class="paramname">q</td><td>the pointer of the lqueue structure</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>O(n) S(1) </dd></dl>
 
 </div>
 </div>
@@ -181,7 +240,16 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
+<p>lqueue_empty - true if the lqueue is empty</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>the pointer of the lqueue structure</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>O(1) S(1) </dd></dl>
 
 </div>
 </div>
@@ -261,7 +329,16 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>size_t</dd></dl>
+<p>lqueue_len - get the length of the lqueue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>the pointer of the lqueue structure</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>O(1) S(1) </dd></dl>
 
 </div>
 </div>
@@ -287,7 +364,16 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d5/dfc/structsingle__list__head.html" title="Simple single list implementation. ">single_list_head</a></dd></dl>
+<p>lqueue_rear - get the rear of the lqueue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>the pointer of the lqueue structure</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d5/dfc/structsingle__list__head.html" title="Simple single list implementation. ">single_list_head</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>O(1) S(1) </dd></dl>
 
 </div>
 </div>

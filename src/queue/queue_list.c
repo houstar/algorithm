@@ -49,6 +49,7 @@ single_list_head *lqueue_front(lqueue *q)
  * \param q the pointer of the lqueue structure
  *
  * \return single_list_head
+ * \note O(1) S(1)
  */
 single_list_head *lqueue_rear(lqueue *q)
 {
@@ -62,12 +63,14 @@ single_list_head *lqueue_rear(lqueue *q)
  * \param q the pointer of the lqueue structure
  *
  * \return bool
+ *
+ * \note O(1) S(1)
  */
 bool lqueue_add(single_list_head *new, lqueue *q)
 {
-    if(!q->front->next) q->rear = new;
-
-    single_list_add(new, q->front);
+    new->next = NULL;
+    single_list_add(new, q->rear);
+    q->rear = q->rear->next;
     q->len++;
 
     return true;
@@ -80,13 +83,27 @@ bool lqueue_add(single_list_head *new, lqueue *q)
  * \param q the pointer of the lqueue structure
  *
  * \return bool
+ * \note O(n) S(1)
  */
 bool lqueue_del(single_list_head *entry, lqueue *q)
 {
-    single_list_del(entry, q->front);
-    q->len--;
+    if(!entry || !q) return false;
 
-    return true;
+    single_list_head *prev = q->front;
+
+    while( prev->next != entry  && prev->next != NULL) {
+        prev = prev->next;
+    }
+
+    if ( prev->next ) {
+        prev->next = prev->next->next;
+        q->rear = prev;
+        q->len--;
+        return true;
+    }
+
+    /* not found the element  */
+    return false;
 }
 
 /**
@@ -95,6 +112,7 @@ bool lqueue_del(single_list_head *entry, lqueue *q)
  * \param q the pointer of the lqueue structure
  *
  * \return size_t
+ * \note O(1) S(1)
  */
 size_t lqueue_len(lqueue *q)
 {
@@ -107,6 +125,7 @@ size_t lqueue_len(lqueue *q)
  * \param q the pointer of the lqueue structure
  *
  * \return bool
+ * \note O(1) S(1)
  */
 bool lqueue_empty(lqueue *q)
 {

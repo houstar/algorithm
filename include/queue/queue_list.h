@@ -59,6 +59,16 @@ extern single_list_head *lqueue_rear(lqueue *q);
 extern bool lqueue_add(single_list_head *new, lqueue *q);
 
 /**
+ * lqueue_del  - delete entry from lqueue
+ *
+ * \param entry the entry to be added
+ * \param q the pointer of the lqueue structure
+ *
+ * \return bool
+ */
+extern bool lqueue_del(single_list_head *entry, lqueue *q);
+
+/**
  * lqueue_len - get the length of the lqueue
  *
  * \param q the pointer of the lqueue structure

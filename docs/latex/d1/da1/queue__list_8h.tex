@@ -23,6 +23,8 @@ bool \mbox{\hyperlink{queue__list_8h_a022ad6b2a41fa5a736d9f9e5b1e4da9e}{lqueue\+
 \item 
 bool \mbox{\hyperlink{queue__list_8h_a358dc65eb5df4c28b3eff9259eb3ab77}{lqueue\+\_\+add}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$new, \mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
 \item 
+bool \mbox{\hyperlink{queue__list_8h_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}{lqueue\+\_\+del}} (\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$entry, \mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
+\item 
 size\+\_\+t \mbox{\hyperlink{queue__list_8h_aa53660e1c4c07745de60121a254d617c}{lqueue\+\_\+len}} (\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
 \item 
 bool \mbox{\hyperlink{queue__list_8h_a6c2195387e5fa70b4cdc5d5ad0f2db72}{lqueue\+\_\+empty}} (\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$q)
@@ -55,8 +57,56 @@ lqueue\+\_\+add -\/ add entry into lqueue
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+lqueue\+\_\+add -\/ add entry into lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em new} & the entry to be added \\
+\hline
+{\em q} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}
+\mbox{\Hypertarget{queue__list_8h_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}\label{queue__list_8h_ae9a2432f0fc65b4dfdc3bd78dcc81fc2}} 
+\index{queue\+\_\+list.\+h@{queue\+\_\+list.\+h}!lqueue\+\_\+del@{lqueue\+\_\+del}}
+\index{lqueue\+\_\+del@{lqueue\+\_\+del}!queue\+\_\+list.\+h@{queue\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{lqueue\+\_\+del()}{lqueue\_del()}}
+{\footnotesize\ttfamily bool lqueue\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} $\ast$}]{entry,  }\item[{\mbox{\hyperlink{structlqueue}{lqueue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+lqueue\+\_\+del -\/ delete entry from lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & the entry to be added \\
+\hline
+{\em q} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+lqueue\+\_\+entry -\/ delete entry into lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & the entry to be delete \\
+\hline
+{\em q} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(n) S(1) 
+\end{DoxyNote}
 \mbox{\Hypertarget{queue__list_8h_a6c2195387e5fa70b4cdc5d5ad0f2db72}\label{queue__list_8h_a6c2195387e5fa70b4cdc5d5ad0f2db72}} 
 \index{queue\+\_\+list.\+h@{queue\+\_\+list.\+h}!lqueue\+\_\+empty@{lqueue\+\_\+empty}}
 \index{lqueue\+\_\+empty@{lqueue\+\_\+empty}!queue\+\_\+list.\+h@{queue\+\_\+list.\+h}}
@@ -71,8 +121,21 @@ lqueue\+\_\+empty -\/ true if the lqueue is empty
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+lqueue\+\_\+empty -\/ true if the lqueue is empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}
 \mbox{\Hypertarget{queue__list_8h_ac007685a8c907a59ac6d2aae13594da0}\label{queue__list_8h_ac007685a8c907a59ac6d2aae13594da0}} 
 \index{queue\+\_\+list.\+h@{queue\+\_\+list.\+h}!lqueue\+\_\+front@{lqueue\+\_\+front}}
 \index{lqueue\+\_\+front@{lqueue\+\_\+front}!queue\+\_\+list.\+h@{queue\+\_\+list.\+h}}
@@ -123,8 +186,21 @@ lqueue\+\_\+len -\/ get the length of the lqueue
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+size\+\_\+t
+\end{DoxyReturn}
+lqueue\+\_\+len -\/ get the length of the lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 size\+\_\+t 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}
 \mbox{\Hypertarget{queue__list_8h_a2a128d7f14563b504bfbc144ccd9cfef}\label{queue__list_8h_a2a128d7f14563b504bfbc144ccd9cfef}} 
 \index{queue\+\_\+list.\+h@{queue\+\_\+list.\+h}!lqueue\+\_\+rear@{lqueue\+\_\+rear}}
 \index{lqueue\+\_\+rear@{lqueue\+\_\+rear}!queue\+\_\+list.\+h@{queue\+\_\+list.\+h}}
@@ -139,5 +215,18 @@ lqueue\+\_\+rear -\/ get the rear of the lqueue
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}}
+\end{DoxyReturn}
+lqueue\+\_\+rear -\/ get the rear of the lqueue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the lqueue structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{structsingle__list__head}{single\+\_\+list\+\_\+head}} 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O(1) S(1) 
+\end{DoxyNote}
