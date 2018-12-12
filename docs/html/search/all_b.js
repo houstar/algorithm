@@ -13,7 +13,6 @@ var searchData=
   ['single_5flist_5finit',['SINGLE_LIST_INIT',['../de/d05/single__list_8h.html#a01f42d62c422698796bb9319f4f48387',1,'single_list.h']]],
   ['single_5flist_5fnext_5fentry',['single_list_next_entry',['../de/d05/single__list_8h.html#a7c00a0ecf173efa145734e33bd1597a4',1,'single_list.h']]],
   ['single_5flist_5freverse',['single_list_reverse',['../de/d05/single__list_8h.html#ac2fbb592f7eb1201605ba038bd95bb52',1,'single_list_reverse(single_list_head *head):&#160;single_list.c'],['../d6/dc3/single__list_8c.html#ac2fbb592f7eb1201605ba038bd95bb52',1,'single_list_reverse(single_list_head *head):&#160;single_list.c']]],
-  ['stack_2eh',['stack.h',['../d7/de0/stack_8h.html',1,'']]],
   ['stack_5fnode',['stack_node',['../d6/dc4/structstack__node.html',1,'']]],
   ['stack_5fsize',['STACK_SIZE',['../d5/d2e/binary__tree_8c.html#a6423a880df59733d2d9b509c7718d3a9',1,'binary_tree.c']]]
 ];

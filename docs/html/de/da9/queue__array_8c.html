@@ -87,8 +87,10 @@ Functions</h2></td></tr>
 <tr class="separator:a9092cb0b932537c33c770d172d6bc34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79d5d691ed29165f4054c623a00c017f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a79d5d691ed29165f4054c623a00c017f">queue_add</a> (void *item, <a class="el" href="../../d2/d36/structqueue.html">queue</a> **q)</td></tr>
 <tr class="separator:a79d5d691ed29165f4054c623a00c017f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a5173e09e1fa90020f1c1a56155f8f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a3a5173e09e1fa90020f1c1a56155f8f6">queue_del</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
-<tr class="separator:a3a5173e09e1fa90020f1c1a56155f8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2848102e35b55f028580a59af0404c1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a2848102e35b55f028580a59af0404c1c">queue_del_front</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
+<tr class="separator:a2848102e35b55f028580a59af0404c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef0aad8b6353cd449ac4faefa4c1578"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#a4ef0aad8b6353cd449ac4faefa4c1578">queue_del_rear</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
+<tr class="separator:a4ef0aad8b6353cd449ac4faefa4c1578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac453aa5f41181a5f175a07a98544994e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da9/queue__array_8c.html#ac453aa5f41181a5f175a07a98544994e">queue_len</a> (<a class="el" href="../../d2/d36/structqueue.html">queue</a> *q)</td></tr>
 <tr class="separator:ac453aa5f41181a5f175a07a98544994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -130,14 +132,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3a5173e09e1fa90020f1c1a56155f8f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a5173e09e1fa90020f1c1a56155f8f6">&#9670;&nbsp;</a></span>queue_del()</h2>
+<a id="a2848102e35b55f028580a59af0404c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2848102e35b55f028580a59af0404c1c">&#9670;&nbsp;</a></span>queue_del_front()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool queue_del </td>
+          <td class="memname">bool queue_del_front </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d2/d36/structqueue.html">queue</a> *&#160;</td>
           <td class="paramname"><em>q</em></td><td>)</td>
@@ -145,7 +147,33 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>queue_del - delete the front entry of the queue</p>
+<p>queue_del_front - delete the front entry of the queue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>the pointer of the structure</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="a4ef0aad8b6353cd449ac4faefa4c1578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ef0aad8b6353cd449ac4faefa4c1578">&#9670;&nbsp;</a></span>queue_del_rear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool queue_del_rear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d36/structqueue.html">queue</a> *&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>queue_del_rear - delete the rear entry of the queue</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>the pointer of the structure</td></tr>

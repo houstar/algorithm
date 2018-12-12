@@ -16,7 +16,7 @@ static void teardown(void)
     /* free the remain memory  */
     for(int i = 0; i < queue_len(q); i++) {
         int *p = queue_front(q);
-        queue_del(q);
+        queue_del_front(q);
         free(p);
     }
 }
@@ -49,7 +49,7 @@ START_TEST(queue_add_leftside_test)
     for(int i = 0; i < 100; i++) {
         int *p = (int *)queue_front(q);
         ck_assert_int_eq(i, *p);
-        ck_assert_int_eq(true, queue_del(q));
+        ck_assert_int_eq(true, queue_del_front(q));
         free(p);
     }
 
@@ -64,7 +64,7 @@ START_TEST(queue_add_leftside_test)
     for(int i = 100; i < 20000; i++) {
         int *p = queue_front(q);
         ck_assert_int_eq(i, *p);
-        queue_del(q);
+        queue_del_front(q);
         free(p);
     }
 }
@@ -83,7 +83,7 @@ START_TEST(queue_add_rightside_test)
     for(int i = 0; i < 300; i++) {
         int *p = (int *)queue_front(q);
         ck_assert_int_eq(i, *p);
-        ck_assert_int_eq(true, queue_del(q));
+        ck_assert_int_eq(true, queue_del_front(q));
         free(p);
     }
 
@@ -98,7 +98,7 @@ START_TEST(queue_add_rightside_test)
     for(int i = 300; i < 20000; i++) {
         int *p = queue_front(q);
         ck_assert_int_eq(i, *p);
-        queue_del(q);
+        queue_del_front(q);
         free(p);
     }
 }

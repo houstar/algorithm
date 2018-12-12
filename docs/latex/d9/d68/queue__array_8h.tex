@@ -30,7 +30,9 @@ void $\ast$ \mbox{\hyperlink{queue__array_8h_a9092cb0b932537c33c770d172d6bc34a}{
 \item 
 bool \mbox{\hyperlink{queue__array_8h_a79d5d691ed29165f4054c623a00c017f}{queue\+\_\+add}} (void $\ast$item, \mbox{\hyperlink{structqueue}{queue}} $\ast$$\ast$q)
 \item 
-bool \mbox{\hyperlink{queue__array_8h_a3a5173e09e1fa90020f1c1a56155f8f6}{queue\+\_\+del}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+bool \mbox{\hyperlink{queue__array_8h_a2848102e35b55f028580a59af0404c1c}{queue\+\_\+del\+\_\+front}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+bool \mbox{\hyperlink{queue__array_8h_a4ef0aad8b6353cd449ac4faefa4c1578}{queue\+\_\+del\+\_\+rear}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
 \item 
 size\+\_\+t \mbox{\hyperlink{queue__array_8h_ac453aa5f41181a5f175a07a98544994e}{queue\+\_\+len}} (\mbox{\hyperlink{structqueue}{queue}} $\ast$q)
 \end{DoxyCompactItemize}
@@ -81,13 +83,29 @@ queue\+\_\+add -\/ add entry into the queue rear
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\mbox{\Hypertarget{queue__array_8h_a3a5173e09e1fa90020f1c1a56155f8f6}\label{queue__array_8h_a3a5173e09e1fa90020f1c1a56155f8f6}} 
-\index{queue\+\_\+array.\+h@{queue\+\_\+array.\+h}!queue\+\_\+del@{queue\+\_\+del}}
-\index{queue\+\_\+del@{queue\+\_\+del}!queue\+\_\+array.\+h@{queue\+\_\+array.\+h}}
-\subsubsection{\texorpdfstring{queue\+\_\+del()}{queue\_del()}}
-{\footnotesize\ttfamily bool queue\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{queue__array_8h_a2848102e35b55f028580a59af0404c1c}\label{queue__array_8h_a2848102e35b55f028580a59af0404c1c}} 
+\index{queue\+\_\+array.\+h@{queue\+\_\+array.\+h}!queue\+\_\+del\+\_\+front@{queue\+\_\+del\+\_\+front}}
+\index{queue\+\_\+del\+\_\+front@{queue\+\_\+del\+\_\+front}!queue\+\_\+array.\+h@{queue\+\_\+array.\+h}}
+\subsubsection{\texorpdfstring{queue\+\_\+del\+\_\+front()}{queue\_del\_front()}}
+{\footnotesize\ttfamily bool queue\+\_\+del\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
 
-queue\+\_\+del -\/ delete the front entry of the queue
+queue\+\_\+del\+\_\+front -\/ delete the front entry of the queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the pointer of the structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue__array_8h_a4ef0aad8b6353cd449ac4faefa4c1578}\label{queue__array_8h_a4ef0aad8b6353cd449ac4faefa4c1578}} 
+\index{queue\+\_\+array.\+h@{queue\+\_\+array.\+h}!queue\+\_\+del\+\_\+rear@{queue\+\_\+del\+\_\+rear}}
+\index{queue\+\_\+del\+\_\+rear@{queue\+\_\+del\+\_\+rear}!queue\+\_\+array.\+h@{queue\+\_\+array.\+h}}
+\subsubsection{\texorpdfstring{queue\+\_\+del\+\_\+rear()}{queue\_del\_rear()}}
+{\footnotesize\ttfamily bool queue\+\_\+del\+\_\+rear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+queue\+\_\+del\+\_\+rear -\/ delete the rear entry of the queue
 
 
 \begin{DoxyParams}{Parameters}

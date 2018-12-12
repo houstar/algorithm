@@ -165,17 +165,33 @@ bool queue_add(void *item, queue **q)
 
 
 /**
- * queue_del - delete the front entry of the queue
+ * queue_del_front - delete the front entry of the queue
  *
  * \param q the pointer of the structure
  *
  * \return bool
  */
-bool queue_del(queue *q)
+bool queue_del_front(queue *q)
 {
     if (queue_empty(q)) return false;
 
     q->front = (q->front + 1) % q->cap;
+
+    return true;
+}
+
+/**
+ * queue_del_rear - delete the rear entry of the queue
+ *
+ * \param q the pointer of the structure
+ *
+ * \return bool
+ */
+bool queue_del_rear(queue *q)
+{
+    if (queue_empty(q)) return false;
+
+    q->rear = (q->rear - 1) % q->cap;
 
     return true;
 }

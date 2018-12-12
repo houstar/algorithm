@@ -81,13 +81,22 @@ extern bool queue_add(void *item, queue **q);
 
 
 /**
- * queue_del - delete the front entry of the queue
+ * queue_del_front - delete the front entry of the queue
  *
  * \param q the pointer of the structure
  *
  * \return bool
  */
-extern bool queue_del(queue *q);
+extern bool queue_del_front(queue *q);
+
+/**
+ * queue_del_rear - delete the rear entry of the queue
+ *
+ * \param q the pointer of the structure
+ *
+ * \return bool
+ */
+extern bool queue_del_rear(queue *q);
 
 /**
  * queue_len - get the length of the queue
