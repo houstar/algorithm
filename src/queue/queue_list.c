@@ -129,5 +129,5 @@ size_t lqueue_len(lqueue *q)
  */
 bool lqueue_empty(lqueue *q)
 {
-    return q->front->next = NULL;
+    return q->front->next == NULL;
 }

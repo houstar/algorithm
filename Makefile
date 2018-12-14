@@ -14,7 +14,8 @@ EXECUTABLE := unittest
 LIBDIR:=
 LIBS := check
 INCLUDES:= include
-SRCDIR:= tests tests/list tests/tree tests/queue src/list src/tree src/queue
+SRCDIR:= tests tests/list tests/tree tests/queue src/list src/tree src/queue \
+	src/hash
 BIN := bin
 DOC := docs
 DOXYFILE := DOXYFILE
