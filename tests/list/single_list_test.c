@@ -24,7 +24,9 @@ static void teardown(void)
 {
     /* iter the single list */
     struct int_list *p = NULL;
-    single_list_for_each_entry(p, &single_list_test_head, list) {
+    struct int_list *n = NULL;
+    single_list_for_each_entry_safe(p, n, &single_list_test_head, list) {
+        single_list_del(&p->list, &single_list_test_head);
         free(p);
     }
 }
@@ -52,7 +54,8 @@ START_TEST(single_list_del_test)
 {
     /* iter the single list */
     struct int_list *p = NULL;
-    single_list_for_each_entry(p, &single_list_test_head, list) {
+    struct int_list *n = NULL;
+    single_list_for_each_entry_safe(p, n, &single_list_test_head, list) {
         single_list_del(&p->list, &single_list_test_head);
         free(p);
     }

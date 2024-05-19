@@ -32,7 +32,7 @@ void single_list_add(single_list_head *new, single_list_head *head)
  */
 void INIT_SINGLE_LIST_HEAD(single_list_head *head)
 {
-    head->next = NULL;
+    head->next = head;
 }
 
 /**
@@ -67,7 +67,7 @@ void single_list_reverse(single_list_head *head)
 
     single_list_head *prev = head->next;
     single_list_head *current = prev->next;
-    while( current != NULL ) {
+    while( current != head ) {
         prev->next = current->next;
         // move current as first element
         current->next = head->next;

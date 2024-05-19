@@ -26,7 +26,7 @@ typedef struct single_list_head {
  * Initialize the single list head's field
  *
  */
-#define SINGLE_LIST_INIT(name) { NULL }
+#define SINGLE_LIST_INIT(name) { &(name) }
 
 /**
  * Initial the single list head
@@ -89,14 +89,28 @@ extern void single_list_reverse(single_list_head *head);
  * single_list_for_each - iter the single list
  */
 #define single_list_for_each(pos, head) \
-    for(pos = (head)->next; pos != NULL; pos = pos->next)
+    for(pos = (head)->next; pos != head ; pos = pos->next)
 
+/**
+ * single_list_for_each_safe - iter the single list while remove entry
+ */
+#define single_list_for_each_safe(pos, n, head) \
+    for(pos = (head)->next, n = pos->next; pos != head ; pos = n, n = pos->next)
+ 
 /**
  * single_list_for_each_entry - iter the single list
  */
 #define single_list_for_each_entry(pos, head, member) \
     for(pos = single_list_first_entry((head), typeof(*pos), member); \
-            &pos->member != NULL; \
+            &pos->member != head; \
             pos = single_list_next_entry(pos, member))
 
+/**
+ * single_list_for_each_entry_safe - iter the single list while remove entry
+ */
+#define single_list_for_each_entry_safe(pos, n, head, member) \
+    for(pos = single_list_first_entry((head), typeof(*pos), member), \
+            n = single_list_next_entry(pos, member); \
+            &pos->member != head; \
+            pos = n, n = single_list_next_entry(pos, member))
 #endif //SINGLE_LIST_H
