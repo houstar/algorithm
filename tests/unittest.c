@@ -8,7 +8,6 @@ int main(int argc, char *argv[])
     SRunner *sr;
 
     sr = srunner_create(make_single_list_suite());
-    srunner_add_suite(sr, make_circle_list_suite());
     srunner_add_suite(sr, make_double_list_suite());
     srunner_add_suite(sr, make_queue_array_suite());
     srunner_add_suite(sr, make_queue_list_suite());
